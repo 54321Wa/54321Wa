@@ -68,12 +68,22 @@ function love.mousepressed(mx,my)
       
       
         button[i][5] = freq
-        if i == "l" and player.x <=0 or  then
+        if i == "l" and player.x <=0 then
+        dx = 0
+
+        else
         
         dx = - 20
 
+        end
+
       
-        elseif i == "r" or player.x >= love.graphics.getWidth()then
+        elseif i == "r" or player.x >= love.graphics.getWidth() - player.width then
+
+        dx = 0
+
+        elseif
+
         dx = 20
         
     
