@@ -85,7 +85,7 @@ function love.mousepressed(mx,my)
 
 function love.mousereleased()
   -- Reset dx/dy when button is released to stop movement
-    dx = 0
+    --dx = 0
 end
 
 
