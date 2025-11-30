@@ -72,7 +72,9 @@ function love.mousepressed(mx,my)
         
         dx = - 20
 
-        if == "r" then
+        
+
+        elseif == "r" then
 
         dx = 20
         
