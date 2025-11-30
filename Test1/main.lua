@@ -64,7 +64,7 @@ function love.mousepressed(mx,my)
 
   for i,v in pairs(button) do
     
-    if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] + v[4] then
+    if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
       
       
         button[i][5] = freq
@@ -74,7 +74,7 @@ function love.mousepressed(mx,my)
 
         
 
-        elseif == "r" then
+        elseif i == "r" then
 
         dx = 20
         
