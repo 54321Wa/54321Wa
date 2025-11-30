@@ -34,7 +34,7 @@ function love.update(dt)
   player.x = player.x + dx * player.speed * dt
   
    
-   player.y = player.y + dy * player.speed * dt
+  player.y = player.y + dy * player.speed * dt
     
   
  
