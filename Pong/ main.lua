@@ -1,9 +1,11 @@
 local love = require "love"
+
 local Player = require "Player"
 
-require ("player")
+
 
 function love.load()
+
   Player:load()
 
 end
