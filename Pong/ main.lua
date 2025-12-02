@@ -1,11 +1,11 @@
-local love = require "love"
+ --local love = require "love"
 
 --local Player = require "Player"
 
 
 
 function love.load()
-  player = { }
+  player = {}
   player.x = 10
   player.y = love.graphics.getHeight()/2
   player.width = 20
