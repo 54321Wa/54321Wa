@@ -5,23 +5,23 @@ local love = require "love"
 
 
 function love.load()
-  player = {
-  x = 10
-  y = love.graphics.getHeight()/2
-  width = 20
-  height = 100
-  speed = 500
-}
+  player = { }
+  player.x = 10
+  player.y = love.graphics.getHeight()/2
+  player.width = 20
+  player.height = 100
+   --player.speed = 500
+
   
 
 end
 
 function  love.update(dt)
-  Player:update(dt)
+  
 
 end
 
 function love.draw()
-  Player:draw()
+ love.graphics.rectangle("fill",player.x, player.y,player.width,player.height)
 
 end
