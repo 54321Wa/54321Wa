@@ -62,10 +62,11 @@ function Pl:mousepressed(mx,my)
 
 --if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
 
- if mx >= 50 and mx <= 50 + 80 and my >= love.graphics.getHeight()-100 and my <= love.graphics.getHeight()-100 + 80 then
+ if  local leftButton == true then
 
  self.x = self.x + self.speed
-end
+
+ end
 
 end
  
