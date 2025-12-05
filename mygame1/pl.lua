@@ -35,7 +35,7 @@ function Pl:update(dt)
     
   end
 
- 
+ self.x = self.x + self.speed
 
 end
 
@@ -44,7 +44,7 @@ function Pl:move()
  --Pl:mousepressed(mx,my)
 
  --test
- self.x = self.x + self.speed
+ 
 
 end
 
@@ -81,9 +81,10 @@ for i,v in pairs(button) do
       
       
         button[i][5] = freq
-        if i == "l" then
+        
         
         dx = - 20
+        --self.x = self.x + self.speed
 
         
 
@@ -95,7 +96,7 @@ for i,v in pairs(button) do
       end  
     end 
 
- end
+ 
 
  
 
