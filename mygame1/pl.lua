@@ -5,7 +5,7 @@ function Pl:load()
  self.y = love.graphics.getHeight()/2
  self.width = 50
  self.height = 50
- self.speed = 5
+ self.speed = - 5
 
  
 
@@ -39,6 +39,9 @@ function Pl:Boundaries()
 end
 
 function Pl:draw()
+ love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
+
+end
 
 
 function Pl:mousepressed(mx,my)
