@@ -58,6 +58,9 @@ end
 
 
 function Pl:mousepressed(mx,my)
+ x=50, y=love.graphics.getHeight()-100, w=80, h=80
+ if mx 
+ 
 
 end
  
