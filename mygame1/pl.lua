@@ -38,7 +38,9 @@ for i,v in pairs(button) do
     
   end
 
- self.x = self.x + self.speed
+--player.x = player.x + dx * player.speed * dt
+
+ self.x = self.x + dx * self.speed
 
 end
 
