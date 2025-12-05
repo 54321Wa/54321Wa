@@ -13,6 +13,10 @@
     l = {0,love.graphics.getHeight()-100,200,100,0},
     r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
   }
+
+  
+
+
   dx = 0
   dy = 0
  
@@ -54,12 +58,12 @@ function love.draw()
   love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
   end
 
-  love.graphics.setFont(gameFont)
-  love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
+  -- love.graphics.setFont(gameFont)
+  -- love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
   
   love.graphics.setColor(255,0,0) --red
   love.graphics.rectangle("fill", 0,0,100,100)
-  love.graphics.rectangle("fill", love.graphics.getWidth()-100,0,100,100)
+  love.graphics.rectangle("fill",     love.graphics.getWidth()-100,0,100,100)
   
   love.graphics.setColor(0,255,0)
   love.graphics.rectangle("fill",player.x, player.y,player.width,player.height)
