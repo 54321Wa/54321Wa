@@ -15,7 +15,8 @@ function Pl:load()
 }
 
  dx = 0
- dy 
+ dy = 0
+ freq = 60
 
 end
 
@@ -40,7 +41,7 @@ end
 
 function Pl:move()
  Pl:Boundaries()
- Pl:mousepressed(mx,my)
+ --Pl:mousepressed(mx,my)
 
  --test
  self.x = self.x + self.speed
