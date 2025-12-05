@@ -35,6 +35,13 @@ function love.update(dt)
   
    
   player.y = player.y + dy * player.speed * dt
+
+  if player.x < 0 then
+  player.x = 0
+
+ elseif player.x + player.width > love.graphics.getWidth() then
+ player.x = love.graphics.getWidth() - player.width
+ end
     
   
  

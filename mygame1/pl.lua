@@ -25,7 +25,7 @@ function Pl:update(dt)
     -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
     -- For continuous movement, use mouse.isDown (or touch.isDown if available)
 
---Pl:Boundaries()
+Pl:Boundaries()
 
  
 for i,v in pairs(button) do
