@@ -1,14 +1,12 @@
-
-
-
+Pl = {}
 
 function Pl:load()
- Pl = {}
+ 
  Pl.x = love.graphics.getWidth()/2
  Pl.y = love.graphics.getHeight()/2
  Pl.width = 50
- self.height = 50
- self.speed = - 5
+ Pl.height = 50
+ Pl.speed = 5
 
  button = {
    l = {50, love.graphics.getHeight()-100, 80, 80, 0},
@@ -41,18 +39,18 @@ for i,v in pairs(button) do
 
 --player.x = player.x + dx * player.speed * dt
 
- self.x = self.x + dx * self.speed * dt
+ Pl.x = Pl.x - Pl.speed
 
 end
 
 
 
 function Pl:Boundaries()
- if self.x < 0 then
-  self.x = 0
+ if Pl.x < 0 then
+  Pl.x = 0
 
- elseif self.x + self.width > love.graphics.getWidth() then
- self.x = love.graphics.getWidth() - self.width
+ elseif Pl.x + Pl.width > love.graphics.getWidth() then
+ Pl.x = love.graphics.getWidth() - Pl.width
  end
 end
 
@@ -66,7 +64,7 @@ function Pl:draw()
   love.graphics.setColor(1, 1, 1) -- Reset color
 
 --Player
- love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
+ love.graphics.rectangle("fill",Pl.x,Pl.y,Pl.width,Pl.height)
 
 end
 
