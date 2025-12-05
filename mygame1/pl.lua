@@ -1,11 +1,12 @@
-Pl = {}
+
 
 
 
 function Pl:load()
- self.x = love.graphics.getWidth()/2
- self.y = love.graphics.getHeight()/2
- self.width = 50
+ Pl = {}
+ Pl.x = love.graphics.getWidth()/2
+ Pl.y = love.graphics.getHeight()/2
+ Pl.width = 50
  self.height = 50
  self.speed = - 5
 
@@ -40,7 +41,7 @@ for i,v in pairs(button) do
 
 --player.x = player.x + dx * player.speed * dt
 
- self.x = self.x + dx * self.speed
+ self.x = self.x + dx * self.speed * dt
 
 end
 
@@ -62,9 +63,9 @@ function Pl:draw()
   love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
   end
 
--- 
+  love.graphics.setColor(1, 1, 1) -- Reset color
 
-    love.graphics.setColor(1, 1, 1) -- Reset color
+--Player
  love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
 
 end
@@ -81,6 +82,7 @@ for i,v in pairs(button) do
         
         if i == "l" then
         dx = - 20
+--   love.graphics.setBackgroundColor(0,255,0)
         elseif i == "r" then
         dx = 20
         end
