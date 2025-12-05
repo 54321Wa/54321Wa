@@ -9,7 +9,9 @@ function platform:load()
 	platform.x = 300                               -- This starts drawing the platform at the left edge of the game window.
   platform.width = 300
 	platform.y = (platform.height / 2)             -- This starts drawing the platform at the very middle of the game window
+  platform.height = 60
 
+  
 end
 
 function platform:update(dt)
