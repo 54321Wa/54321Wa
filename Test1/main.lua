@@ -4,7 +4,7 @@
    
   player = {}
   player.x = love.graphics.getWidth()/2
-  player.y = love.graphics.getHeight()/2
+  player.y = love.graphics.getHeight()-200
   player.width = 100
   player.height = 100
   player.speed = 20
