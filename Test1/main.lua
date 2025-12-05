@@ -2,7 +2,7 @@
    
   player = {}
   player.x = love.graphics.getWidth()/2
-  player.y = 500
+  player.y = love.graphics.getHeight()-200
   player.width = 100
   player.height = 100
   player.speed = 20
@@ -63,7 +63,8 @@ function love.draw()
 
   -- Text
   love.graphics.setColor(0,255,0)
-  love.graphics.print("left",50,love.graphics.getHeight()-50)
+  love.graphics.print("Left",50,love.graphics.getHeight()-70)
+  love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics.getHeight()-70)
   
   love.graphics.setColor(255,0,0) --red
   love.graphics.rectangle("fill", 0,0,100,100)
