@@ -10,12 +10,9 @@ function Pl:load()
  self.speed = - 5
 
  button = {
-   l = {50, y=love.graphics.getHeight()-100, 80, 80},
-   r = {200, y=love.graphics.getHeight()-100, 80, 80},
+   l = {50, love.graphics.getHeight()-100, 80, 80},
+   r = {200, love.graphics.getHeight()-100, 80, 80},
 }
-
- 
-
 
 end
 
@@ -51,10 +48,19 @@ end
 
 function Pl:draw()
 
+ for i,v in pairs(button) do
+  love.graphics.setColor(0.5,0.5,0.5,0.5)
+  love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
+  end
+
 -- Draw buttons (visual feedback is key)
-    love.graphics.setColor(0.5, 0.5, 0.5, 0.5) -- Grey semi-transparent
-    love.graphics.rectangle("fill", leftButton.x, leftButton.y, leftButton.w, leftButton.h)
-    love.graphics.rectangle("fill", rightButton.x, rightButton.y, rightButton.w, rightButton.h)
+    --love.graphics.setColor(0.5, 0.5, 0.5, 0.5) -- Grey semi-transparent
+
+
+    --love.graphics.rectangle("fill", leftButton.x, leftButton.y, leftButton.w, leftButton.h)
+    --love.graphics.rectangle("fill", rightButton.x, rightButton.y, rightButton.w, rightButton.h)
+
+
     love.graphics.setColor(1, 1, 1) -- Reset color
  love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
 
@@ -66,11 +72,7 @@ function Pl:mousepressed(mx,my)
 
 --if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
 
- if  local leftButton == true then
-
- self.x = self.x + self.speed
-
- end
+ 
 
 end
  
