@@ -6,8 +6,10 @@ function platform:load()
 	platform.height = love.graphics.getHeight()  -- This makes the platform as tall as the whole game window.
         
         -- This is the coordinates where the platform will be rendered.
-	platform.x = 0                               -- This starts drawing the platform at the left edge of the game window.
-	platform.y = platform.height / 2             -- This starts drawing the platform at the very middle of the game window
+	platform.x = 300                               -- This starts drawing the platform at the left edge of the game window.
+  platform.width = 300
+	platform.y = (platform.height / 2)             -- This starts drawing the platform at the very middle of the game window
+
 end
 
 function platform:update(dt)
