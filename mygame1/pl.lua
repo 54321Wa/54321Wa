@@ -25,8 +25,11 @@ function Pl:update(dt)
 -- Check for touches within button areas (using mousepressed works for touches too)
     -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
     -- For continuous movement, use mouse.isDown (or touch.isDown if available)
- Pl:move()
- for i,v in pairs(button) do
+
+Pl:Boundaries()
+
+ 
+for i,v in pairs(button) do
     if v[5] > 0 then
       button[i][5] = v[5] - dt
     else 
@@ -39,14 +42,7 @@ function Pl:update(dt)
 
 end
 
-function Pl:move()
- Pl:Boundaries()
- --Pl:mousepressed(mx,my)
 
- --test
- 
-
-end
 
 function Pl:Boundaries()
  if self.x < 0 then
@@ -79,34 +75,19 @@ for i,v in pairs(button) do
     
     if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
       
-      
         button[i][5] = freq
         
-        
+        if i == "l" then
         dx = - 20
-        --self.x = self.x + self.speed
-
-        
-
         elseif i == "r" then
-
         dx = 20
-        
         end
       end  
     end 
-
- 
-
- 
-
-
- 
-
-
+end
 
 function love.mousereleased()
-  
+  dx = 0
 end
 
 
