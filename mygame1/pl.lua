@@ -1,7 +1,6 @@
 Pl = {}
 
-local leftButton = {x=50, y=love.graphics.getHeight()-100, w=80, h=80}
-local rightButton = {x=200, y=love.graphics.getHeight()-100, w=80, h=80}
+
 
 function Pl:load()
  self.x = love.graphics.getWidth()/2
@@ -9,6 +8,11 @@ function Pl:load()
  self.width = 50
  self.height = 50
  self.speed = - 5
+
+ button = {
+   l = {50, y=love.graphics.getHeight()-100, 80, 80},
+   r = {200, y=love.graphics.getHeight()-100, 80, 80},
+}
 
  
 
