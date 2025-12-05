@@ -1,5 +1,8 @@
 Pl = {}
 
+local leftButton = {x=50, y=love.graphics.getHeight()-100, w=80, h=80}
+local rightButton = {x=200, y=love.graphics.getHeight()-100, w=80, h=80}
+
 function Pl:load()
  self.x = love.graphics.getWidth()/2
  self.y = love.graphics.getHeight()/2
@@ -39,6 +42,12 @@ function Pl:Boundaries()
 end
 
 function Pl:draw()
+
+-- Draw buttons (visual feedback is key)
+    love.graphics.setColor(0.5, 0.5, 0.5, 0.5) -- Grey semi-transparent
+    love.graphics.rectangle("fill", leftButton.x, leftButton.y, leftButton.w, leftButton.h)
+    love.graphics.rectangle("fill", rightButton.x, rightButton.y, rightButton.w, rightButton.h)
+    love.graphics.setColor(1, 1, 1) -- Reset color
  love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
 
 end
@@ -54,5 +63,22 @@ end
 function love.mousereleased()
   
 end
+
+
+
+function love.load()
+    -- ...
+end
+
+function love.update(dt)
+    -- Check for touches within button areas (using mousepressed works for touches too)
+    -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
+    -- For continuous movement, use mouse.isDown (or touch.isDown if available)
+end
+
+function love.draw()
+    
+end
+
 
 
