@@ -10,8 +10,8 @@
   gameFont = love.graphics.newFont(40)
   
   button = {
-    l = {0,400,200,100,0},
-    r = {love.graphics.getWidth()-200,400,200,100,0},
+    l = {0,love.graphics.getHeight()-100,200,100,0},
+    r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
   }
   dx = 0
   dy = 0
