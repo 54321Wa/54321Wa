@@ -1,5 +1,8 @@
- function love.load()
-      love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
+require("platform")
+
+function love.load()
+
+       love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
   love.graphics.setBackgroundColor(255,0,100)
    
   player = {}
@@ -23,6 +26,8 @@
   dy = 0
  
  freq = 60
+
+ Platform:load()
   
 end
 
