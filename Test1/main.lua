@@ -1,10 +1,10 @@
  function love.load()
-  love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
+      love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
   love.graphics.setBackgroundColor(255,0,100)
    
   player = {}
   player.x = love.graphics.getWidth()/2
-  player.y = love.graphics.getHeight()-200
+  player.y = love.graphics.getHeight()/2
   player.width = 100
   player.height = 100
   player.speed = 20
