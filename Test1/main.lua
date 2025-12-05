@@ -4,6 +4,8 @@ function love.load()
 
        love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
   love.graphics.setBackgroundColor(255,0,100)
+
+  platform:load()
    
   player = {}
   player.x = love.graphics.getWidth()/2
@@ -27,11 +29,13 @@ function love.load()
  
  freq = 60
 
- Platform:load()
+  
   
 end
 
 function love.update(dt)
+
+  platform:update(dt)
   
   for i,v in pairs(button) do
     if v[5] > 0 then
@@ -52,6 +56,8 @@ function love.update(dt)
 
  elseif player.x + player.width > love.graphics.getWidth() then
  player.x = love.graphics.getWidth() - player.width
+
+ 
  end
     
   
@@ -59,6 +65,8 @@ function love.update(dt)
 end
 
 function love.draw()
+
+  platform:draw()
   
   for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)
@@ -79,6 +87,9 @@ function love.draw()
   
   love.graphics.setColor(0,255,0)
   love.graphics.rectangle("fill",player.x, player.y,player.width,player.height)
+ 
+
+ 
 end
 
 function love.mousepressed(mx,my)
