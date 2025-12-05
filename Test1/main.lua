@@ -1,4 +1,6 @@
  function love.load()
+  love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
+  love.graphics.setBackgroundColor(255,0,100)
    
   player = {}
   player.x = love.graphics.getWidth()/2
