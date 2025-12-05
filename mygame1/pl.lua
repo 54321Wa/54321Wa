@@ -12,13 +12,13 @@ function Pl:load()
     r = {love.graphics.getWidth()-200,400,200,100,0},
   }
 
-  dx = 0
-  dy = 0
+  --dx = 0
+  --dy = 0
  
- freq = 60
+ --freq = 60
 
 
-checkBoundaries  = true
+--checkBoundaries  = true
 
 end
 
@@ -33,10 +33,10 @@ for i,v in pairs(button) do
     
   end
 
-  player.x = player.x + dx * player.speed * dt
+  --player.x = player.x + dx * player.speed * dt
   
    
-  player.y = player.y + dy * player.speed * dt
+  --player.y = player.y + dy * player.speed * dt
 
 end
 
