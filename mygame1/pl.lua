@@ -16,6 +16,10 @@ function Pl:load()
 end
 
 function Pl:update(dt)
+
+-- Check for touches within button areas (using mousepressed works for touches too)
+    -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
+    -- For continuous movement, use mouse.isDown (or touch.isDown if available)
  Pl:move()
 
 
@@ -66,19 +70,7 @@ end
 
 
 
-function love.load()
-    -- ...
-end
 
-function love.update(dt)
-    -- Check for touches within button areas (using mousepressed works for touches too)
-    -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
-    -- For continuous movement, use mouse.isDown (or touch.isDown if available)
-end
-
-function love.draw()
-    
-end
 
 
 
