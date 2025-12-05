@@ -10,8 +10,8 @@ function Pl:load()
  self.speed = - 5
 
  button = {
-   l = {50, love.graphics.getHeight()-100, 80, 80},
-   r = {200, love.graphics.getHeight()-100, 80, 80},
+   l = {50, love.graphics.getHeight()-100, 80, 80, 0},
+   r = {200, love.graphics.getHeight()-100, 80, 80, 0},
 }
 
 end
@@ -22,7 +22,14 @@ function Pl:update(dt)
     -- [2] recommends checking touch.getTouches() for multi-touch, or using mousepressed/released for simple taps
     -- For continuous movement, use mouse.isDown (or touch.isDown if available)
  Pl:move()
-
+ for i,v in pairs(button) do
+    if v[5] > 0 then
+      button[i][5] = v[5] - dt
+    else 
+      button[i][5] = 0
+    end
+    
+  end
 
  
 
@@ -53,13 +60,7 @@ function Pl:draw()
   love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
   end
 
--- Draw buttons (visual feedback is key)
-    --love.graphics.setColor(0.5, 0.5, 0.5, 0.5) -- Grey semi-transparent
-
-
-    --love.graphics.rectangle("fill", leftButton.x, leftButton.y, leftButton.w, leftButton.h)
-    --love.graphics.rectangle("fill", rightButton.x, rightButton.y, rightButton.w, rightButton.h)
-
+-- 
 
     love.graphics.setColor(1, 1, 1) -- Reset color
  love.graphics.rectangle("fill",self.x,self.y,self.width,self.height)
@@ -68,9 +69,11 @@ end
 
 
 function Pl:mousepressed(mx,my)
- --x=50, y=love.graphics.getHeight()-100, w=80, h=80
+ 
 
---if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
+if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
+ print("haha")
+ end
 
  
 
