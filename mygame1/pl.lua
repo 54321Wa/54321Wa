@@ -9,8 +9,8 @@ function Pl:load()
  Pl.speed = 5
 
  button = {
-   l = {50, love.graphics.getHeight()-100, 80, 80, 0},
-   r = {200, love.graphics.getHeight()-100, 80, 80, 0},
+    l = {0,400,200,100,0},
+    r = {love.graphics.getWidth()-200,400,200,100,0},
 }
 
  dx = 0
@@ -39,7 +39,7 @@ for i,v in pairs(button) do
 
 --player.x = player.x + dx * player.speed * dt
 
- Pl.x = Pl.x + dx *
+ Pl.x = Pl.x + dx * Pl.speed * dt
 
 end
 
