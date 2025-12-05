@@ -58,8 +58,12 @@ function love.draw()
   love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
   end
 
-  -- love.graphics.setFont(gameFont)
+  love.graphics.setFont(gameFont)
   -- love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
+
+  -- Text
+  love.graphics.setColor(0,255,0)
+  love.graphics.print("left",50,love.graphics.getHeight()-50)
   
   love.graphics.setColor(255,0,0) --red
   love.graphics.rectangle("fill", 0,0,100,100)
