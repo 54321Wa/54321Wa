@@ -14,6 +14,9 @@ function Pl:load()
    r = {200, love.graphics.getHeight()-100, 80, 80, 0},
 }
 
+ dx = 0
+ dy 
+
 end
 
 function Pl:update(dt)
@@ -71,13 +74,31 @@ end
 function Pl:mousepressed(mx,my)
  
 
-if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
- print("haha")
+for i,v in pairs(button) do
+    
+    if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
+      
+      
+        button[i][5] = freq
+        if i == "l" then
+        
+        dx = - 20
+
+        
+
+        elseif i == "r" then
+
+        dx = 20
+        
+        end
+      end  
+    end 
+
  end
 
  
 
-end
+
  
 
 
