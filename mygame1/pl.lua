@@ -58,12 +58,14 @@ end
 
 
 function Pl:mousepressed(mx,my)
- x=50, y=love.graphics.getHeight()-100, w=80, h=80
+ --x=50, y=love.graphics.getHeight()-100, w=80, h=80
 
-if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
+--if mx >= v[1] and mx <= v[1] + v[3] and my >= v[2] and my <= v[2] +  v[4] then
 
- if mx >= 50 and mx <= 50 + 80 and my >= love.graphics.getHeight()
- 
+ if mx >= 50 and mx <= 50 + 80 and my >= love.graphics.getHeight()-100 and my <= love.graphics.getHeight()-100 + 80 then
+
+ self.x = self.x + self.speed
+end
 
 end
  
