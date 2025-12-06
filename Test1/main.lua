@@ -19,7 +19,7 @@ function love.load()
   button = {
     l = {0,love.graphics.getHeight()-100,200,100,0},
     r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
-    j 
+    j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
   }
 
   
