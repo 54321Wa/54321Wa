@@ -30,7 +30,7 @@ end
 
 function love.draw()
 
-    love.graphics.draw(playerImage, )
+    love.graphics.draw(playerImage, playerWidth, playerHeight)
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
     love.graphics.draw(buttonImage2, buttonX2, buttonY2)
     love.graphics.draw(buttonImage3, buttonX3, buttonY3)
