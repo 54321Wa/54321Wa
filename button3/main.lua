@@ -1,7 +1,4 @@
 function love.load()
-
-    player = {}
-    playerImage  =  love.graphics
     buttonImage1 = love.graphics.newImage("btn_l.png")
     buttonImage2 = love.graphics.newImage("btn_r.png")
     buttonImage3 = love.graphics.newImage("btn_j.png")
