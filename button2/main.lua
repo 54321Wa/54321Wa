@@ -2,10 +2,18 @@ function love.load()
 
     player = {}
     playerImage4  =  love.graphics.newImage("player.png")
-    player.x = love.graphics.getWidth()/2
-    player.y = love.graphics.getHeight() - 100
-    playerX4 = playerImage:getWidth()
-    playerX5 = playerImage:getHeight()
+
+    
+    
+    playerX4 = love.graphics.getWidth()/2
+    playerX4 = love.graphics.getHeight() - 100
+    playerWidth4 = playerImage4:getWidth()
+    playerHeight4 = playerImage4:getHeight()
+
+   buttonX1 = 100
+    buttonY1 = 100
+    buttonWidth1 = buttonImage1:getWidth()
+    buttonHeight1 = buttonImage1:getHeight()
 
     buttonImage1 = love.graphics.newImage("btn_l.png")
     buttonImage2 = love.graphics.newImage("btn_r.png")
