@@ -4,8 +4,8 @@ function love.load()
     playerImage  =  love.graphics.newImage("assets/player.png")
     player.x = love.graphics.getWidth()/2
     player.y = love.graphics.getHeight() - 100
-    playerWidth = playerImage:getWidth()
-    playerHeight = playerImage:getHeight()
+    playerX4 = playerImage:getWidth()
+    playerX5 = playerImage:getHeight()
 
     buttonImage1 = love.graphics.newImage("btn_l.png")
     buttonImage2 = love.graphics.newImage("btn_r.png")
@@ -30,7 +30,7 @@ end
 
 function love.draw()
 
-    love.graphics.draw(playerImage, playerWidth, playerHeight)
+    love.graphics.draw(playerImage, player4, player4)
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
     love.graphics.draw(buttonImage2, buttonX2, buttonY2)
     love.graphics.draw(buttonImage3, buttonX3, buttonY3)
