@@ -10,7 +10,7 @@ function love.load()
     playerWidth4 = playerImage4:getWidth()
     playerHeight4 = playerImage4:getHeight()
 
-   buttonX1 = 100
+    buttonX1 = 100
     buttonY1 = 100
     buttonWidth1 = buttonImage1:getWidth()
     buttonHeight1 = buttonImage1:getHeight()
@@ -38,7 +38,7 @@ end
 
 function love.draw()
 
-    love.graphics.draw(playerImage, playerX4, playerX4)
+    love.graphics.draw(playerImage4, playerX4, playerX4)
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
     love.graphics.draw(buttonImage2, buttonX2, buttonY2)
     love.graphics.draw(buttonImage3, buttonX3, buttonY3)
