@@ -1,6 +1,6 @@
 function love.load()
     buttonImage1 = love.graphics.newImage("btn_l.png")
-    buttonImage2 = love.graphics.newImage("btn_l.png")
+    buttonImage2 = love.graphics.newImage("btn_r.png")
     -- Define the button's position and size
     buttonX1 = 100
     buttonY1 = 100
@@ -27,8 +27,9 @@ function love.touchpressed(id, x, y, dx, dy, pressure)
         -- Add your button logic here (e.g., change game state, open menu)
     love.graphics.setBackgroundColor(255,0,0)
     end
-    if x >= buttonX2 and x <= buttonX1 + buttonWidth1 and
-       y >= buttonY1 and y <= buttonY1 + buttonY1 + buttonHeight1 then
-
+    if x >= buttonX2 and x <= buttonX2 + buttonWidth2 and
+       y >= buttonY2 and y <= buttonY2 + buttonY2 + buttonHeight2 then
+    love.graphics.setBackgroundColor(255,0,255)
+    end
     
 end
