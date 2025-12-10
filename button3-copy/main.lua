@@ -18,13 +18,20 @@ function love.load()
     buttonY3 = 100
     buttonWidth3 = buttonImage3:getWidth()
     buttonHeight3 = buttonImage3:getHeight()
+
+    playerX4 = 500
+    playerY4 = 100
+    playerWidth4 = playerImage3:getWidth()
+    playerHeight4 = buttonImage3:getHeight()
 end
 
 function love.draw()
-    love.graphics.draw()
+    
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
     love.graphics.draw(buttonImage2, buttonX2, buttonY2)
     love.graphics.draw(buttonImage3, buttonX3, buttonY3)
+
+    love.graphics.draw(playerImage4,playerX4,playerY4)
 end
 
 function love.touchpressed(id, x, y, dx, dy, pressure)
