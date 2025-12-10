@@ -27,7 +27,7 @@ function love.draw()
 end
 
 function love.touchpressed(id, x, y, dx, dy, pressure)
-    -- Check if the touch coordinates (x, y) are within the button's area
+    -- Check if the touch coordinates (x, y) are within the button's area ---left
     if x >= buttonX1 and x <= buttonX1 + buttonWidth1 and
        y >= buttonY1 and y <= buttonY1 + buttonY1 + buttonHeight1 then
         -- This code runs when the button is touched
@@ -35,11 +35,14 @@ function love.touchpressed(id, x, y, dx, dy, pressure)
         -- Add your button logic here (e.g., change game state, open menu)
     love.graphics.setBackgroundColor(255,0,0)
     end
+
+    ---right
     if x >= buttonX2 and x <= buttonX2 + buttonWidth2 and
        y >= buttonY2 and y <= buttonY2 + buttonY2 + buttonHeight2 then
     love.graphics.setBackgroundColor(255,0,255)
     end
-
+ 
+    --jump
     if x >= buttonX3 and x <= buttonX3 + buttonWidth3 and
        y >= buttonY3 and y <= buttonY3 + buttonY3 + buttonHeight3 then
     love.graphics.setBackgroundColor(0,255,0)
