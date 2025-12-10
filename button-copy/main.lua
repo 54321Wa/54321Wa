@@ -1,5 +1,5 @@
 function love.load()
-    buttonImage = love.graphics.newImage("path/to/your/button_image.png")
+    buttonImage = love.graphics.newImage("btn_l.png")
     -- Define the button's position and size
     buttonX = 100
     buttonY = 100
