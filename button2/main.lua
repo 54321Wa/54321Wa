@@ -12,12 +12,12 @@ function love.load()
     buttonX2 = 300
     buttonY2 = 100
     buttonWidth2 = buttonImage2:getWidth()
-    buttonHeight2 = buttonImage1:getHeight()
+    buttonHeight2 = buttonImage2:getHeight()
 
     buttonX3 = 500
     buttonY3 = 100
-    buttonWidth3 = buttonImage1:getWidth()
-    buttonHeight3 = buttonImage1:getHeight()
+    buttonWidth3 = buttonImage3:getWidth()
+    buttonHeight3 = buttonImage3:getHeight()
 end
 
 function love.draw()
@@ -38,6 +38,11 @@ function love.touchpressed(id, x, y, dx, dy, pressure)
     if x >= buttonX2 and x <= buttonX2 + buttonWidth2 and
        y >= buttonY2 and y <= buttonY2 + buttonY2 + buttonHeight2 then
     love.graphics.setBackgroundColor(255,0,255)
+    end
+
+    if x >= buttonX3 and x <= buttonX3 + buttonWidth3 and
+       y >= buttonY3 and y <= buttonY3 + buttonY3 + buttonHeight3 then
+    love.graphics.setBackgroundColor(0,255,0)
     end
     
 end
