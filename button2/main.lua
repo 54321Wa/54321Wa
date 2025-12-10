@@ -1,6 +1,8 @@
 function love.load()
     buttonImage1 = love.graphics.newImage("btn_l.png")
     buttonImage2 = love.graphics.newImage("btn_r.png")
+    buttonImage3 = love.graphics.newImage("btn_j.png")
+
     -- Define the button's position and size
     buttonX1 = 100
     buttonY1 = 100
@@ -9,13 +11,19 @@ function love.load()
 
     buttonX2 = 300
     buttonY2 = 100
-    buttonWidth2 = buttonImage1:getWidth()
+    buttonWidth2 = buttonImage2:getWidth()
     buttonHeight2 = buttonImage1:getHeight()
+
+    buttonX3 = 500
+    buttonY3 = 100
+    buttonWidth3 = buttonImage1:getWidth()
+    buttonHeight3 = buttonImage1:getHeight()
 end
 
 function love.draw()
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
     love.graphics.draw(buttonImage2, buttonX2, buttonY2)
+    love.graphics.draw(buttonImage3, buttonX3, buttonY3)
 end
 
 function love.touchpressed(id, x, y, dx, dy, pressure)
