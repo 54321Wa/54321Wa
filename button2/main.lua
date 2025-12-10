@@ -4,22 +4,31 @@ function love.load()
     -- Define the button's position and size
     buttonX1 = 100
     buttonY1 = 100
-    buttonWidth1 = buttonImage:getWidth()
-    buttonHeight1 = buttonImage:getHeight()
+    buttonWidth1 = buttonImage1:getWidth()
+    buttonHeight1 = buttonImage1:getHeight()
+
+    buttonX2 = 300
+    buttonY2 = 100
+    buttonWidth2 = buttonImage1:getWidth()
+    buttonHeight2 = buttonImage1:getHeight()
 end
 
 function love.draw()
     love.graphics.draw(buttonImage1, buttonX1, buttonY1)
+    love.graphics.draw(buttonImage2, buttonX2, buttonY2)
 end
 
 function love.touchpressed(id, x, y, dx, dy, pressure)
     -- Check if the touch coordinates (x, y) are within the button's area
-    if x >= buttonX and x <= buttonX + buttonWidth and
-       y >= buttonY and y <= buttonY + buttonY + buttonHeight then
+    if x >= buttonX1 and x <= buttonX1 + buttonWidth1 and
+       y >= buttonY1 and y <= buttonY1 + buttonY1 + buttonHeight1 then
         -- This code runs when the button is touched
         print("Button was touched on iPhone!")
         -- Add your button logic here (e.g., change game state, open menu)
-
     love.graphics.setBackgroundColor(255,0,0)
     end
+    if x >= buttonX2 and x <= buttonX1 + buttonWidth1 and
+       y >= buttonY1 and y <= buttonY1 + buttonY1 + buttonHeight1 then
+
+    
 end
