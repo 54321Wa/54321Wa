@@ -18,5 +18,7 @@ function love.touchpressed(id, x, y, dx, dy, pressure)
         -- This code runs when the button is touched
         print("Button was touched on iPhone!")
         -- Add your button logic here (e.g., change game state, open menu)
+
+    love.graphics.setBackgroundColor(255,0,0)
     end
 end
