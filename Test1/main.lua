@@ -63,7 +63,7 @@ function love.update(dt)
   if player.y < 0 then
   player.y = 0
 
-  elseif player.y > love.graphics.getHeight() - player.height then
+  elseif player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.height
 
   end
