@@ -3,6 +3,8 @@ function love.load()
     buttonImage2 = love.graphics.newImage("btn_r.png")
     buttonImage3 = love.graphics.newImage("btn_j.png")
 
+    playerImage4 = love.graphics.newImage("player.png")
+
     -- Define the button's position and size
     buttonX1 = 100
     buttonY1 = 100
@@ -19,10 +21,10 @@ function love.load()
     buttonWidth3 = buttonImage3:getWidth()
     buttonHeight3 = buttonImage3:getHeight()
 
-    playerX4 = 500
-    playerY4 = 100
-    playerWidth4 = playerImage3:getWidth()
-    playerHeight4 = buttonImage3:getHeight()
+    playerX4 = love.graphics.getWidth()/2
+    playerY4 = love.graphics.getHeight() - 150
+    playerWidth4 = playerImage4:getWidth()
+    playerHeight4 = playerImage4:getHeight()
 end
 
 function love.draw()
