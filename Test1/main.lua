@@ -65,6 +65,14 @@ function love.update(dt)
   elseif player.x + player.width > love.graphics.getWidth() then
   player.x = love.graphics.getWidth() - player.width
   
+  end
+  if player.y < 0 then
+  player.y = 0
+
+  elseif player.y > love.graphics.getHeight() - player.height then
+  player.y = love.graphics.getHeight() - player.height
+
+  end
  
 -- Add below the right key assignment. 
 
