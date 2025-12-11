@@ -62,9 +62,10 @@ function love.update(dt)
   if player.x < 0 then
   player.x = 0
 
- elseif player.x + player.width > love.graphics.getWidth() then
- player.x = love.graphics.getWidth() - player.width
-
+  elseif player.x + player.width > love.graphics.getWidth() then
+  player.x = love.graphics.getWidth() - player.width
+  
+ 
 -- Add below the right key assignment. 
 
         -- This is in charge of player jumping.
@@ -144,6 +145,10 @@ function love.mousepressed(mx,my)
         elseif i == "r" then
 
         dx = 20
+
+        elseif i == "j" then
+        
+        dy = -40
         
         end
       end  
@@ -153,6 +158,7 @@ function love.mousepressed(mx,my)
 function love.mousereleased()
   -- Reset dx/dy when button is released to stop movement
     dx = 0
+    dy = 9.81
 end
 
 
