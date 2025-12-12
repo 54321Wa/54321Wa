@@ -14,7 +14,7 @@ function love.load()
   player.height = 100
   player.speed = 20
 
-  player.gr
+  player.ground = player.y
   
   gameFont = love.graphics.newFont(40)
   
@@ -62,8 +62,13 @@ function love.update(dt)
   player.x = love.graphics.getWidth() - player.width
   
   end
-  if player.y < 0 then
-  player.y = 0
+  --if player.y < 0 then
+  --player.y = 0
+
+  if player.y > player.ground then
+		player.y_velocity = 0
+    	player.y = player.ground
+	
 
   elseif player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.height
