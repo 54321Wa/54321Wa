@@ -15,6 +15,7 @@ function love.load()
   player.speed = 20
 
   player.ground = player.y
+
   
   gameFont = love.graphics.newFont(40)
   
@@ -68,6 +69,7 @@ function love.update(dt)
   elseif player.y > player.ground then
 		player.y_velocity = 0
     	player.y = player.ground
+    
 	
 
   elseif player.y > love.graphics.getHeight() -200 then
@@ -134,9 +136,7 @@ function love.mousepressed(mx,my)
 
         elseif i == "j" then
 
-        player.y_velocity == 0 then
-			player.y_velocity = player.jump_height
-		end
+      
         
         dy = -40
         
