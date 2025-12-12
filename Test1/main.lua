@@ -13,6 +13,8 @@ function love.load()
   player.width = 100
   player.height = 100
   player.speed = 20
+
+  player.gr
   
   gameFont = love.graphics.newFont(40)
   
