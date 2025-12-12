@@ -62,10 +62,10 @@ function love.update(dt)
   player.x = love.graphics.getWidth() - player.width
   
   end
-  --if player.y < 0 then
-  --player.y = 0
+  if player.y < 0 then
+    player.y = 0
 
-  if player.y > player.ground then
+  elseif player.y > player.ground then
 		player.y_velocity = 0
     	player.y = player.ground
 	
@@ -133,6 +133,10 @@ function love.mousepressed(mx,my)
         dx = 20
 
         elseif i == "j" then
+
+        player.y_velocity == 0 then
+			player.y_velocity = player.jump_height
+		end
         
         dy = -40
         
