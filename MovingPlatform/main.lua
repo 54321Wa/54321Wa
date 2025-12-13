@@ -4,28 +4,29 @@ local x = 100
 local dir = 1
 
 function love.load()
- love.graphics.setBackgroundColor(0,0,0)
-  o
+ love.graphics.setBackgroundColor(0,0,60)
+
 
 
 end
 
 
 function love.update(dt)
- if x > 300 or x < 50 then
+ if x > 400 or x < 50 then
    dir = dir * -1
 
  end
   
- --x = x + 60 * dt
+ x = x + dir * 120 * dt
   
 end
 
 function love.draw()
 
---love.graphics.setColor(255,255,255)
+love.graphics.setColor(0,255,0)
 love.graphics.print("Love2D Tutorial EP1",50,100)
 
 love.graphics.setColor(128,64,255)
 love.graphics.rectangle("fill",x,200,100,50)
+love.gra
 end
