@@ -1,17 +1,20 @@
+require("conf(t)")
+
 local x = 100
 local dir = 1
 
 function love.load()
   --print("console!")
+ 
+
 
 end
 
 
 function love.update(dt)
- if x >= 400 or x <= 50 then
-  x = x + 5 * 60 * dt
-  dir = dir * -1
- end
+ --if x > 400 or x < 50 then
+
+ --end
 end
 
 function love.draw()
