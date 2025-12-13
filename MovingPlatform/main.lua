@@ -12,8 +12,11 @@ end
 
 
 function love.update(dt)
+ if x > 400 or < 50 then
+
+ end
   
-    x = x + 60 * dt
+    --x = x + 60 * dt
   
 end
 
