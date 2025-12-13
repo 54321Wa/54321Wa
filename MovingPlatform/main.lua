@@ -1,4 +1,5 @@
 function love.load()
+  print("console!")
 
 end
 
