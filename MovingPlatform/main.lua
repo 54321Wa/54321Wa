@@ -8,11 +8,9 @@ end
 
 
 function love.update(dt)
- if x >= 400 then
-  x = x + dir * 60 * dt
- elseif 
-
-
+ if x >= 400 or x <= 50 then
+  dir = dir * -1
+ end
 end
 
 function love.draw()
