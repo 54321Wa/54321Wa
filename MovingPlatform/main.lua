@@ -1,4 +1,6 @@
 local x = 100
+local dir = 1
+
 function love.load()
   print("console!")
 
@@ -6,7 +8,11 @@ end
 
 
 function love.update(dt)
- x 
+ if x >= 400 then
+  x = x + dir * 60 * dt
+ elseif 
+
+
 end
 
 function love.draw()
