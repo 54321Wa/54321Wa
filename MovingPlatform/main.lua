@@ -5,18 +5,19 @@ local dir = 1
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,0)
- 
+  o
 
 
 end
 
 
 function love.update(dt)
- if x > 400 or < 50 then
+ if x > 300 or x < 50 then
+   dir = dir * -1
 
  end
   
-    --x = x + 60 * dt
+ --x = x + 60 * dt
   
 end
 
