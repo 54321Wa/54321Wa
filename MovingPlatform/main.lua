@@ -12,9 +12,9 @@ end
 
 
 function love.update(dt)
- --if x > 400 or x < 50 then
-
- --end
+  
+    x = x + 60 * dt
+  
 end
 
 function love.draw()
