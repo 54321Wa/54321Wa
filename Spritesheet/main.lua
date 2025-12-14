@@ -8,7 +8,7 @@ function love.load()
   
  hero_atlas = love.graphics.newImage("assets/gfx/hero.png")
 
- hero_sprite = love.graphics.newQuad(32,16,16,16,hero_atlas:getDimension(),hero_atlas:getDimension())
+ hero_sprite = love.graphics.newQuad(32,16,16,16,hero_atlas:getDimensions())
 
 end
 
@@ -24,4 +24,5 @@ love.graphics.setColor(255,0,0)
 love.graphics.print("Love2D Tutorial EP2",450,100)
 
 love.graphics.draw(hero_atlas,25,25,0,2,2)
+love.graphics.draw(hero_atlas,hero_sprite,25,300)
 end
