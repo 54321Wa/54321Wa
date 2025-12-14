@@ -1,7 +1,9 @@
-
+local hero_atlas
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,60)
+  
+ hero_atlas = love.graphics.
 
 
 
