@@ -12,12 +12,12 @@ end
 
 
 function love.update(dt)
- if dt > 0.040 then return
+ if dt > 0.040 then return end
 
  if x < 120 then
-   dir = dir * 1
- elseif x > 400
-   dir = dir * -1
+   dir = 1
+ elseif x > 400 then
+   dir = -1
 
  end
   
