@@ -1,13 +1,14 @@
 local hero_atlas
+local hero_sprite
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,60)
 
- love.graphics.setDefaultFilter("nearesr")
+ love.graphics.setDefaultFilter("nearest","nearest")
   
  hero_atlas = love.graphics.newImage("assets/gfx/hero.png")
 
-
+ hero_sprite = love.graphics.newQuad()
 
 end
 
