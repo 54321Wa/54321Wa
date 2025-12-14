@@ -23,10 +23,10 @@ end
 
 function love.draw()
 
-love.graphics.setColor(0,255,0)
+love.graphics.setColor(255,0,0)
 love.graphics.print("Love2D Tutorial EP1",50,100)
 
 love.graphics.setColor(128,64,255)
 love.graphics.rectangle("fill",x,200,100,50)
-love.gra
+love.graphics.setColor(1,1,1)
 end
