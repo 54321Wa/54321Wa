@@ -24,5 +24,5 @@ love.graphics.setColor(255,0,0)
 love.graphics.print("Love2D Tutorial EP2",450,100)
 
 love.graphics.draw(hero_atlas,25,25,0,2,2)
-love.graphics.draw(hero_atlas,hero_sprite,25,300)
+love.graphics.draw(hero_atlas,hero_sprite,100,300,math.rad(45),4,4,)
 end
