@@ -8,7 +8,7 @@ function love.load()
   
  hero_atlas = love.graphics.newImage("assets/gfx/hero.png")
 
- hero_sprite = love.graphics.newQuad()
+ hero_sprite = love.graphics.newQuad(32,16,16,16,hero_atlas:getDimension(),hero_atlas:getDimension())
 
 end
 
