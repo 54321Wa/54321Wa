@@ -5,6 +5,7 @@ function love.conf(t)
   t.console = true -- console windows only
   t.window.title="Cool Game"
   t.window.icon = "icon/game_icon.jpeg"
-  t.window.resizable =,
+  t.window.resizable = true
+  t.window.borderless = false
 
 end
