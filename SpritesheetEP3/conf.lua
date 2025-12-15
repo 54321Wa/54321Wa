@@ -10,5 +10,6 @@ function love.conf(t)
 
   t.window.display = 2
   t.window.x = 100
+  t.window.y = 200
 
 end
