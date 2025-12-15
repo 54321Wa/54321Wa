@@ -30,6 +30,8 @@ if anim_timer > 0 then
 anim_timer = 1 / fps
 frame = frame + 1
 if frame > num_frames then frame = 1 end
+xoffset = 16 * frame
+hero_sprite:setViewport(xoffset,32,16,16)
 end
   
 end
