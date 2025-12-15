@@ -26,7 +26,11 @@ if dt > 0.035 then return end
 --angle = angle + 27.5 * dt
 anim_timer = anim_timer - dt
 
-if 
+if anim_timer > 0 then
+anim_timer = 1 / fps
+frame = frame + 1
+if frame > num_frames then frame = 1 end
+end
   
 end
 
