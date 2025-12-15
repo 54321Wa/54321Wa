@@ -1,6 +1,6 @@
 local hero_atlas
 local hero_sprite
-local angle 
+local angle = 0
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,60)
@@ -9,7 +9,7 @@ function love.load()
   
  hero_atlas = love.graphics.newImage("assets/gfx/hero.png")
 
- hero_sprite = love.graphics.newQuad(32,16,16,16,hero_atlas:getDimensions())
+ hero_sprite = love.graphics.newQuad(16,32,16,16,hero_atlas:getDimensions())
 
 end
 
@@ -28,5 +28,5 @@ love.graphics.setColor(255,0,0)
 love.graphics.print("Love2D Tutorial EP3",450,100)
 
 --love.graphics.draw(hero_atlas,25,25,0,2,2)
-love.graphics.draw(hero_atlas,hero_sprite,320,160,math.rad(45),8,8,0.5,0.5)
+love.graphics.draw(hero_atlas,hero_sprite,320,160,math.rad(angle),4,4,8,8)
 end
