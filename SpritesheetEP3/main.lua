@@ -2,7 +2,11 @@ local hero_atlas
 local hero_sprite
 local angle = 0
 
-lo
+local fps = 10
+local anim_timer = 1/fps
+local frame = 1
+local num_frames = 6
+local xoffset
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,0.9)
@@ -20,7 +24,9 @@ function love.update(dt)
 if dt > 0.035 then return end
 
 --angle = angle + 27.5 * dt
- 
+anim_timer = anim_timer - dt
+
+if 
   
 end
 
