@@ -21,7 +21,7 @@ end
 function love.draw()
 
 love.graphics.setColor(255,0,0)
-love.graphics.print("Love2D Tutorial EP2",450,100)
+love.graphics.print("Love2D Tutorial EP3",450,100)
 
 love.graphics.draw(hero_atlas,25,25,0,2,2)
 love.graphics.draw(hero_atlas,hero_sprite,320,160,math.rad(45),4,4,0.5,0.5)

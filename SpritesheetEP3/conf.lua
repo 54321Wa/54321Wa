@@ -8,7 +8,7 @@ function love.conf(t)
   t.window.resizable = true
   t.window.borderless = false
 
-  t.window.display = 1
+  t.window.display = 2
   t.window.x = 100
 
 end
