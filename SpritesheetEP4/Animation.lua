@@ -9,7 +9,7 @@ function Anim:new()
    self.offset = Vector2()
    self.size = Vector2()
    
-   self.h =
+   
   
 end
 
@@ -18,9 +18,10 @@ function Anim:update()
    if(self.timer <= 0) then
      self.timer = 1 / fps
      self.frame = self.frame + 1
-     if self.frame > self.num_frames then self.frame = 
-     
-   end
+     if self.frame > self.num_frames then
+       self.frame = 1 end
+     end
+     self.offset.x = self.size.x * frame
 end
 
 return Anim
