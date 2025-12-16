@@ -10,11 +10,9 @@ function Anim:new(xoffset, yoffset, w, h, column_size, num_frames,fps)
    self.start_offset = Vector2(xoffset,     yoffset)
    self.offset = Vector2()
    self.size = Vector2(w,h)
-   
-   
-  
 end
 
+function A
 function Anim:update()
    self.timer = self.timer * dt
    if(self.timer <= 0) then
@@ -24,6 +22,8 @@ function Anim:update()
        self.frame = 1 end
      end
      self.offset.x = self.start_offset + ()self.size.x * (frame - 1))
+
+     self.offset.y = self.start_offset + ()self.size.y * (frame - 1))
 end
 
 return Anim
