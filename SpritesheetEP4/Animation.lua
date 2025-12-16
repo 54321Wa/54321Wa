@@ -13,6 +13,14 @@ function Anim:new()
   
 end
 
-function Anim
+function Anim:update()
+   self.timer = self.timer * dt
+   if(self.timer <= 0) then
+     self.timer = 1 / fps
+     self.frame = self.frame + 1
+     if self.frame > self.num_frames then self.frame = 
+     
+   end
+end
 
 return Anim
