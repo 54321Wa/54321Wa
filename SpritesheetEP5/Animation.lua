@@ -1,13 +1,14 @@
 local class = require("class")
 local Anim = class:derive("Animation")
 
-function Anim:new()
-   self.fps =
+function Anim:new(xoffset, yoffset, w, h, column_size, num_frames,fps)
+   self.fps = fps
    self.timer = 1 / self.fps
-   self.frame )
-   self.num_frames =
-   self.offset = Vector2()
-   self.size = Vector2()
+   self.frame = 1
+   self.num_frames = num_frames
+   self.start_offset = Vector2(xoffset,     yoffset)
+   self.offset = V
+   self.size = Vector2(w,h)
    
    
   
