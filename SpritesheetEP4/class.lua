@@ -21,7 +21,10 @@ end
 function Class:get_type()
   return self.type
 
-local Player ) Class:derive
+local Player = Class:derive("Player")
+  function Player:new(name)
+  end
+local plyr1 = Player()
 
 
 return Class
