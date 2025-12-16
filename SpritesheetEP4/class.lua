@@ -24,7 +24,7 @@ function Class:get_type()
 local Player = Class:derive("Player")
   function Player:new(name)
   end
-local plyr1 = Player()
+local plyr1 = Player("nelix")
 
 
 return Class
