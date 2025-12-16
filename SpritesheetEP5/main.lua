@@ -1,5 +1,7 @@
 local hero_atlas
 local hero_sprite
+local Anim = require("Animation")
+
 local angle = 0
 
 local fps = 10
@@ -7,6 +9,8 @@ local anim_timer = 1 / fps
 local frame = 1
 local num_frames = 6
 local xoffset
+
+local a = anim(16,32,16,16,6,12)
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,255,200)
@@ -17,7 +21,7 @@ function love.load()
 
  hero_sprite = love.graphics.newQuad(16,32,16,16,hero_atlas:getDimensions())
 
-local an = Anim(xoffset,yoffset,w,h,column_)
+local an = Anim()
 
 end
 

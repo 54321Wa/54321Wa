@@ -25,9 +25,9 @@ function Anim:update()
      if self.frame > self.num_frames then
        self.frame = 1 end
      end
-     self.offset.x = self.start_offset + ()self.size.x * (frame - 1))
+     self.offset.x = self.start_offset + (self.size.x * (frame - 1))
 
-     self.offset.y = self.start_offset + ()self.size.y * math.floor(frame /self.column_size))
+     self.offset.y = self.start_offset + (self.size.y * math.floor(frame /self.column_size))
 end
 
 return Anim
