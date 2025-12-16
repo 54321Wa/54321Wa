@@ -17,6 +17,8 @@ function love.load()
 
  hero_sprite = love.graphics.newQuad(16,32,16,16,hero_atlas:getDimensions())
 
+local an = Anim(xoffset,yoffset,w,h,column_)
+
 end
 
 
