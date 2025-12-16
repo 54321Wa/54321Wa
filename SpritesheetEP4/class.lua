@@ -12,9 +12,16 @@ function Class:derive(type)
   setmetatable(cls,self)
   return cls
 
-
+function Class:__cal(...)
+  local inst = setmetatable({}, self)
+  inst:new(...)
+  return
+end
 
 function Class:get_type()
   return self.type
+
+local Player ) Class:derive
+
 
 return Class
