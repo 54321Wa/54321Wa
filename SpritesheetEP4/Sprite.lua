@@ -2,10 +2,12 @@ local class = require class
 local Sprite = class:derive("Sprite")
 
 function Sprite:new()
-
+  self:animations = {}
 end
 
-function Sprite
+function Sprite:animation(anim_name)
+
+end
 
 function Sprite:update(dt)
 
