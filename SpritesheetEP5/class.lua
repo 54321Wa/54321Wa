@@ -6,14 +6,15 @@ function Class:new() end
 
 --create a new Class type from our base Class
 function Class:derive(type)
-  local class = {}
-  class["__call"] = Class.__call
+  local cls = {}
+  
   
   cls.type = type
   cls.__index = cls
   cls.super = self
   setmetatable(cls,self)
   return cls
+end
 
 function Class:__call(...)
   local inst = setmetatable({}, self)
@@ -23,6 +24,7 @@ end
 
 function Class:get_type()
   return self.type
+end
 
 
 local Player = Class:derive("Player")
