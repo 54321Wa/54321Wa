@@ -1,4 +1,4 @@
-local class = require class
+local class = require("class")
 local Vec2 = class:derive("Vector2")
 
 function Vec2:new(x,y)

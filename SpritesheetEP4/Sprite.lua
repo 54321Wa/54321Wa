@@ -1,5 +1,4 @@
 local class = require("class")
-local Vector2 = require("Vector2")
 local Sprite = class:derive("Sprite")
 
 function Sprite:new()
@@ -7,6 +6,7 @@ function Sprite:new()
 end
 
 function Sprite:animation(anim_name)
+  self.animations = {}
 
 end
 
