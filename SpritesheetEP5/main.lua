@@ -10,7 +10,7 @@ local frame = 1
 local num_frames = 6
 local xoffset
 
-local an = anim(16,32,16,16,6,12)
+local a = anim(16,32,16,16,6,6, 12)
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,255,200)
