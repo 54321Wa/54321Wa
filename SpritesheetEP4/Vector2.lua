@@ -1,6 +1,11 @@
 local class = require class
-local Vec = class:derive("Sprite")
+local Vec2 = class:derive("Vector2")
 
-function Sprite:new()
-  self:animations = {}
+function Vec2:new(x,y)
+  self.x = x or 0
+  self.y = y or 0
+  
 end
+
+
+return Vec2

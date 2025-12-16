@@ -1,4 +1,5 @@
-local class = require class
+local class = require("class")
+local Vector2 = require("Vector2")
 local Sprite = class:derive("Sprite")
 
 function Sprite:new()
