@@ -9,7 +9,7 @@ local num_frames = 6
 local xoffset
 
 function love.load()
- --love.graphics.setBackgroundColor(0,0,0.9)
+ love.graphics.setBackgroundColor(0,0,255,200)
 
  love.graphics.setDefaultFilter("nearest","nearest")
   
