@@ -1,4 +1,5 @@
 require("platform")
+require("platform1")
 
 function love.load()
 
@@ -6,6 +7,7 @@ function love.load()
   love.graphics.setBackgroundColor(255,0,100)
 
   platform:load()
+  platform1:load()
    
   player = {}
   player.x = love.graphics.getWidth()/2
