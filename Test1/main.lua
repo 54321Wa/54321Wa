@@ -43,6 +43,7 @@ end
 function love.update(dt)
 
   platform:update(dt)
+  platform1:update(dt)
   
   for i,v in pairs(button) do
     if v[5] > 0 then
@@ -91,6 +92,7 @@ function love.update(dt)
 function love.draw()
 
   platform:draw()
+  platform11:draw()
   
   for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)

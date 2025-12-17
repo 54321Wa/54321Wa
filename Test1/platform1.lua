@@ -4,14 +4,11 @@ local x = 100
 local dir = 1
 
 function platform1:load()
- 
-
-
 
 end
 
 
-function love.update(dt)
+function platform1:update(dt)
  if dt > 0.040 then return end
 
  if x < 120 then
@@ -25,7 +22,7 @@ function love.update(dt)
   
 end
 
-function love.draw()
+function platform1:draw()
 
 love.graphics.setColor(255,0,0)
 love.graphics.print("Love2D Tutorial EP1",50,100)
