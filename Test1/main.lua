@@ -10,8 +10,8 @@ function love.load()
   player = {}
   player.x = love.graphics.getWidth()/2
   player.y = love.graphics.getHeight()-200
-  player.width = 100
-  player.height = 100
+  player.w = 100
+  player.h = 100
   player.speed = 20
 
   player.ground = player.y
@@ -59,8 +59,8 @@ function love.update(dt)
   if player.x < 0 then
   player.x = 0
 
-  elseif player.x + player.width > love.graphics.getWidth() then
-  player.x = love.graphics.getWidth() - player.width
+  elseif player.x + player.w > love.graphics.getWidth() then
+  player.x = love.graphics.getWidth() - player.w
   
   end
   if player.y < 0 then
@@ -108,7 +108,7 @@ function love.draw()
   love.graphics.rectangle("fill",     love.graphics.getWidth()-100,0,100,100)
   
   love.graphics.setColor(0,255,0)
-  love.graphics.rectangle("fill",player.x, player.y,player.width,player.height)
+  love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
 
  
