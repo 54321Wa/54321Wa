@@ -156,11 +156,16 @@ function love.mousereleased()
 end
 
 
-function checkCollision(player.x, player.y, player.w, player.h,platform.x, platform.y, platform.w, platform.h)
+--function checkCollision(player.x, player.y, player.w, player.h,platform.x, platform.y, platform.w, platform.h)
 
+--end
+
+function CheckCollision(player.x,player.y,player.w,player.h, platform.x,platform.y,w2,h2)
+  return x1 < x2+w2 and
+         x2 < x1+w1 and
+         y1 < y2+h2 and
+         y2 < y1+h1
 end
-
-
 
 
 
