@@ -25,7 +25,7 @@ end
 function love.update(dt)
     if dt > 0.035 then return end
 
-    --a:update(dt, hero_sprite)
+    a:update(dt, hero_sprite)
     -- a:update(dt, hero_sprite)
     -- anim_timer = anim_timer - dt
     -- if anim_timer <= 0 then
