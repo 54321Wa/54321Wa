@@ -13,7 +13,7 @@ local num_frames = 6
 local xoffset
 -----------------------
 
-local spr 
+local spr
 local walk = Anim(16, 32, 16, 16, 6, 6, 12)
 local swim = Anim(16, 64, 16, 16, 6, 6, 12)
 
@@ -31,7 +31,7 @@ function love.update(dt)
     if dt > 0.035 then return end
 
     spr:update(dt)
-    -- a:update(dt, hero_sprite)
+    a:update(dt, hero_sprite)
     -- anim_timer = anim_timer - dt
     -- if anim_timer <= 0 then
     --     anim_timer = 1 / fps
