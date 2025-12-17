@@ -93,6 +93,7 @@ function love.draw()
 
   platform:draw()
   platform1:draw()
+  checkCollision:draw()
   
   for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)
@@ -155,7 +156,13 @@ function love.mousereleased()
     dy = 9.81
 end
 
-fun
+function checkCollision()
+
+    if player.x + player.w > platform.x then
+      print("Collision")
+    end
+
+end
 
 
 
