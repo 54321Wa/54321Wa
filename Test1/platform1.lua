@@ -1,10 +1,14 @@
-platfom1 = {}
+platform1 = {}
 
-local x = 100
+local x = 300
 local dir = 1
 
 function platform1:load()
-
+   platform1.x = platform1.x
+   platform1.y = 600
+   platform.w  = 240
+   platform.h  =  50
+  
 end
 
 
@@ -24,10 +28,9 @@ end
 
 function platform1:draw()
 
-love.graphics.setColor(255,0,0)
-love.graphics.print("Love2D Tutorial EP1",50,100)
+
 
 love.graphics.setColor(128,64,255)
-love.graphics.rectangle("fill",x,200,100,50)
+love.graphics.rectangle("fill",platform1.x,200,100,50)
 love.graphics.setColor(1,1,1)
 end
