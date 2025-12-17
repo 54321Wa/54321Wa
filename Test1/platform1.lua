@@ -31,6 +31,6 @@ function platform1:draw()
 
 
 love.graphics.setColor(128,64,255)
-love.graphics.rectangle("fill",platform1.x,200,100,50)
+love.graphics.rectangle("fill", x,200,100,50)
 love.graphics.setColor(1,1,1)
 end
