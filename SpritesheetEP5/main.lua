@@ -9,8 +9,9 @@ local anim_timer = 1 / fps
 local frame = 1
 local num_frames = 6
 local xoffset
+local an = Anim()
 
-local a = anim(16,32,16,16,6,6, 12)
+local an = anim(16,32,16,16,6,6, 12)
 
 function love.load()
  love.graphics.setBackgroundColor(0,0,255,200)
@@ -21,7 +22,7 @@ function love.load()
 
  hero_sprite = love.graphics.newQuad(16,32,16,16,hero_atlas:getDimensions())
 
-local an = Anim()
+
 
 end
 
