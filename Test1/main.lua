@@ -160,11 +160,11 @@ end
 
 --end
 
-function CheckCollision(player.x,player.y,player.w,player.h, platform.x,platform.y,w2,h2)
-  return x1 < x2+w2 and
-         x2 < x1+w1 and
-         y1 < y2+h2 and
-         y2 < y1+h1
+function CheckCollision(player.x,player.y,player.w,player.h, platform.x,platform.y,platform.w,platform.h)
+  return player.x < platform.y+platform.w and
+         platform.x < player.x+player.w and
+         player.y < platform.y+platform.h and
+         platform.y < player.h + player.h
 end
 
 
