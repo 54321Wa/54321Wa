@@ -3,7 +3,7 @@ local Anim = class:derive("Animation")
 local Vector2 = require("Vector2")
 
 function Anim:new(xoffset, yoffset, w, h, column_size, num_frames, fps)
-    self.fps = 0
+    self.fps = fps
     self.timer = 1 / self.fps
     self.frame = 1
     self.num_frames = num_frames
