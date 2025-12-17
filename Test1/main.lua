@@ -156,7 +156,9 @@ function love.mousereleased()
 end
 
 
+function checkCollision(player.x, player.y, player.w, player.h,platform.x, platform.y, platform.w, platform.h)
 
+end
 
 
 
