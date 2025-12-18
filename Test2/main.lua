@@ -35,7 +35,10 @@ function love.load()
  
  freq = 60
 
-  
+  platform.x = platform.x
+  platform.y = platform.y
+  platform.h = platform.h
+  platform.w = platform.w
   
   
 end
@@ -158,13 +161,13 @@ function love.mousereleased()
     dy = 9.81
 end
 
-function checkCollision(player.x,player.y,player.w,platform.h,platform.x,platform.y,platform.w,platform.h)
+function checkCollision()
 
-player.x < platform.x + platform.w and
+if player.x < platform.x + platform.w and
 platform.x < player.x player.w and
 player.y < platform.y and platform.h and
 platform.y < player.y + player.h 
-
+end
     
 return
 
