@@ -158,14 +158,14 @@ function love.mousereleased()
     dy = 9.81
 end
 
-function checkCollision()
+function checkCollision(player.x,player.y,player.w,platform.h,platform.x,platform.y,platform.w,platform.h)
 
-if player.x < platform.x + platform.w and
+player.x < platform.x + platform.w and
 platform.x < player.x player.w and
 player.y < platform.y and platform.h and
-platform.y < player.y + player.h then
+platform.y < player.y + player.h 
 
-    end
+    
 return
 
 end
