@@ -118,9 +118,9 @@ function love.draw()
   love.graphics.setColor(0,255,0)
   love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
-  if checkCollision() == true then
-      print("Collision")
-  end
+  
+
+
  
 end
 
@@ -161,29 +161,7 @@ function love.mousereleased()
     dy = 9.81
 end
 
-function checkCollision()
 
-if player.x < platform.x + platform.w then
-print("collided")
-end
-
-if platform.x < player.x player.w then
-print("collided")
-end
-
-if player.y < platform.y + platform.h then
-print("collided")
-end
-         
-if platform.y < player.y + player.h then
-
-print("collided")
-
-end
-    
-   return
-
-end
 
 --1=player
 --2 = platform
