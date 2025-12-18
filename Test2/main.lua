@@ -86,9 +86,9 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-if player.y > platform.y + platform.h then
-    mousepressed = false
-end 
+  if player.y < platform.y then
+     player.y = platform.y + platform.h
+  end 
 
   
 
