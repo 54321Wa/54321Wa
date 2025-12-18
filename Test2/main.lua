@@ -109,16 +109,15 @@ function love.draw()
   -- Text
   love.graphics.setColor(0,255,0)
   love.graphics.print("Left",50,love.graphics.getHeight()-70)
-  love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics.getHeight()-70)
-  
-  --love.graphics.setColor(255,0,0) --red
-  --love.graphics.rectangle("fill", 0,0,100,100)
-  --love.graphics.rectangle("fill",       love.graphics.getWidth()-100,0,100,100)
-  
-  love.graphics.setColor(0,255,0)
-  love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
+         love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
+
+love.graphics.setColor(0,255,0)
+love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
-  
+--------Collision with platform ------
+if player.y > platform.y + platform.h then
+    dx = 0
+end 
 
 
  
