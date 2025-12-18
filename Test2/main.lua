@@ -164,12 +164,22 @@ end
 function checkCollision()
 
 if player.x < platform.x + platform.w and
-platform.x < player.x player.w and
-player.y < platform.y and platform.h and
-platform.y < player.y + player.h 
+   if platform.x < player.x player.w then
+      if player.y < platform.y + platform.h then
+         if platform.y < player.y + player.h then
+
+           print("collided")
+
+         end
+
+      end
+
+   end
+
 end
+ 
     
-return
+   return
 
 end
 
