@@ -93,7 +93,7 @@ function love.draw()
 
   platform:draw()
   platform1:draw()
-  checkCollision:draw()
+  
   
   for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)
@@ -115,7 +115,9 @@ function love.draw()
   love.graphics.setColor(0,255,0)
   love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
-
+  if player.x + player.w > platform.x then
+      print("Collision")
+  end
  
 end
 
@@ -162,6 +164,17 @@ function checkCollision()
       print("Collision")
     end
 
+end
+
+-- Collision detection function;
+-- Returns true if two boxes overlap, false if they don't;
+-- x1,y1 are the top-left coords of the first box, while w1,h1 are its width and height;
+-- x2,y2,w2 & h2 are the same, but for the second box.
+function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
+  return x1 < x2+w2 and
+         x2 < x1+w1 and
+         y1 < y2+h2 and
+         y2 < y1+h1
 end
 
 
