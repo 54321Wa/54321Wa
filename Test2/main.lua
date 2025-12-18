@@ -160,13 +160,17 @@ end
 
 function checkCollision()
 
-    if player.x + player.w > platform.x then
-      print("Collision")
+if player.x < platform.x + platform.w and
+platform.x < player.x player.w and
+player
+
+    
     end
 
 end
 
-1
+--1=player
+--2 = platform
 
 -- Collision detection function;
 -- Returns true if two boxes overlap, false if they don't;
