@@ -1,6 +1,8 @@
 require("platform")
 require("platform1")
 
+mousepressed = true
+
 function love.load()
 
        love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
@@ -69,24 +71,30 @@ function love.update(dt)
   player.x = love.graphics.getWidth() - player.w
   
   end
+
+--- edge of screen
   if player.y < 0 then
     player.y = 0
 
   elseif player.y > player.ground then
 		player.y_velocity = 0
     	player.y = player.ground
-    
-	
-
+  
   elseif player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.height
 
-  end
+end
  
+--------Collision with platform ------
+if player.y > platform.y + platform.h then
+    mousepressed = false
+end 
+
+  
 
 
  
- end
+end
     
   
  
@@ -114,11 +122,6 @@ function love.draw()
 love.graphics.setColor(0,255,0)
 love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
---------Collision with platform ------
-if player.y > platform.y + platform.h then
-    dx = 0
-end 
-
 
  
 end
