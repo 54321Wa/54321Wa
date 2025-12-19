@@ -86,8 +86,8 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-  if player.y < platform.y then
-     player.y = platform.y + platform.h
+  if player.y > platform.y + platform.h then
+     player.y_velocity = 0
   end 
 
   
@@ -163,7 +163,12 @@ function love.mousereleased()
     dy = 9.81
 end
 
-
+function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
+  return x1 < x2+w2 and
+         x2 < x1+w1 and
+         y1 < y2+h2 and
+         y2 < y1+h1
+end
 
 --1=player
 --2 = platform
