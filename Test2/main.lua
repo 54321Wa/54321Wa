@@ -163,8 +163,8 @@ function love.mousereleased()
     dy = 9.81
 end
 
-function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
-     checkCollision(pad.x, pad.y, pad.width, pad.height, ball.x, ball.y, ball.width, ball.height)
+function CheckCollision(player.x, player.y, player.width, player.height, platform.x, platform.y, platform.width, platform.height)
+     
 end
 
 
