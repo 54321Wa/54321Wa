@@ -12,7 +12,7 @@ function love.load()
   platform1:load()
    
   player = {}
-  player.x = love.graphics.getWidth()/2
+  player.x =   0 --  love.graphics.getWidth()/2
   player.y = love.graphics.getHeight()-200
   player.w = 100
   player.h = 100
@@ -86,8 +86,11 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-  if player.x  > platform.x  then
-     love.graphics.print("collided left"100,200)
+  if player.x + player.w < platform.x  then
+     push()
+     love.graphics.setColor(0,0,255)
+     love.graphics.print("collided left",100,200)
+     pop()
   end 
 
   
