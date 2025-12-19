@@ -37,10 +37,7 @@ function love.load()
  
  freq = 60
 
-  platform.x = platform.x
-  platform.y = platform.y
-  platform.h = platform.h
-  platform.w = platform.w
+  
   
   
 end
@@ -86,7 +83,7 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-  if player.x > 400  then
+  if player.x + player.w > platform.x  then
       dx = 0
      
      --love.graphics.setColor(0,255,0)
