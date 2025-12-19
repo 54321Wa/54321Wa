@@ -86,11 +86,12 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-  if player.x + player.w < platform.x  then
-     push()
-     love.graphics.setColor(0,0,255)
-     love.graphics.print("collided left",100,200)
-     pop()
+  if player.x > 400  then
+      dx = 0
+     
+     --love.graphics.setColor(0,255,0)
+     --love.graphics.print("collided left",100,200)
+     
   end 
 
   
