@@ -72,9 +72,9 @@ function love.draw()
 
 -----
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-   love.graphics.setColor(255,0,0)
+   love.graphics.setColor(255,255,255)
 else
-   love.graphics.setColor(0,)
+   love.graphics.setColor(0,0,255)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 end
 
@@ -114,7 +114,8 @@ function love.update(dt)
 --- collision
   if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
 
- print("Collision")
+   print("Collision")
+   
  end
 
 --- edge of screen
