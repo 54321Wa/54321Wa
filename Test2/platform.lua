@@ -2,11 +2,7 @@ platform = {}
 
 function platform:load()
 
-  function CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-love.graphics.setColor(0,255,0)
-
-
-end
+  
         -- This is the height and the width of the platform.
 	platform.w = love.graphics.getWidth()    -- This makes the platform as wide as the whole game window.
 	platform.h = love.graphics.getHeight()  -- This makes the platform as tall as the whole game window.

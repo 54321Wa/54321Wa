@@ -7,6 +7,15 @@ function love.load()
 
        love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
   love.graphics.setBackgroundColor(255,0,100)
+    if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) 
+then
+love.graphics.setColor(0,255,0)
+
+else
+love.graphics.setColor(255,0,0)
+end
+
+
 
   platform:load()
   platform1:load()
