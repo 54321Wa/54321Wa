@@ -83,7 +83,8 @@ function love.update(dt)
 end
  
 --------Collision with platform ------
-  if player.x + player.w > platform.x  then
+  if player.x + player.w > platform.x  and
+     player.y + player.h < platform.y then
       dx = 0
      
      --love.graphics.setColor(0,255,0)
