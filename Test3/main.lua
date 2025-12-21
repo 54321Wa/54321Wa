@@ -30,15 +30,6 @@ function love.load()
   platform.w = 400
   platform.h = 40
 
-if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) 
-then
-love.graphics.setColor(0,255,0)
-
-else
-love.graphics.setColor(255,0,0)
-end
-
-  
   gameFont = love.graphics.newFont(40)
   
   button = {
@@ -47,17 +38,45 @@ end
     j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
   }
 
-  
-
-
   dx = 0
   dy = 0
  
  freq = 60
 
+end
+
+
+    
+  
+ 
+
+
+function love.draw()
+
+  --platform:draw()
+  platform1:draw()
   
   
-  
+  for i,v in pairs(button) do
+  love.graphics.setColor(255,255,255)
+  love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
+  end
+
+  love.graphics.setFont(gameFont)
+  -- love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
+
+  -- Text
+  love.graphics.setColor(0,255,0)
+  love.graphics.print("Left",50,love.graphics.getHeight()-70)
+         love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
+
+love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
+
+love.graphics.setColor(0,255,0)
+love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
+ 
+
+ 
 end
 
 function love.update(dt)
@@ -109,38 +128,6 @@ end
 
   
 
-
- 
-end
-    
-  
- 
-
-
-function love.draw()
-
-  --platform:draw()
-  platform1:draw()
-  
-  
-  for i,v in pairs(button) do
-  love.graphics.setColor(255,255,255)
-  love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
-  end
-
-  love.graphics.setFont(gameFont)
-  -- love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
-
-  -- Text
-  love.graphics.setColor(0,255,0)
-  love.graphics.print("Left",50,love.graphics.getHeight()-70)
-         love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
-
-love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
-
-love.graphics.setColor(0,255,0)
-love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
- 
 
  
 end
