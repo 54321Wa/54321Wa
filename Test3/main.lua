@@ -12,7 +12,7 @@ function love.load()
 
 
 
-  platform:load()
+  --platform:load()
   platform1:load()
    
   player = {}
@@ -23,6 +23,19 @@ function love.load()
   player.speed = 20
 
   player.ground = player.y
+
+  platform.x
+  platform.h
+  platform.w
+  platform.h
+
+if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) 
+then
+love.graphics.setColor(0,255,0)
+
+else
+love.graphics.setColor(255,0,0)
+end
 
   
   gameFont = love.graphics.newFont(40)
