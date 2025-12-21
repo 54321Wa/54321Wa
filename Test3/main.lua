@@ -115,7 +115,9 @@ function love.update(dt)
   if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
 
    print("Collision")
-   
+   dx = 0
+   dy = 0
+
  end
 
 --- edge of screen
