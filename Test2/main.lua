@@ -68,6 +68,11 @@ function love.update(dt)
   player.x = love.graphics.getWidth() - player.w
   
   end
+--- collision
+  if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+
+ print("Collision")
+ end
 
 --- edge of screen
   if player.y < 0 then
@@ -82,16 +87,7 @@ function love.update(dt)
 
 end
  
---------Collision with platform ------
-  if player.x + player.w > platform.x  then
-     --player.y + player.h > platform.y + platform.h and
-     --player.y + player.h < platform.y then
-      dx = 0
-     
-     --love.graphics.setColor(0,255,0)
-     --love.graphics.print("collided left",100,200)
-     
-  end 
+
 
   
 
