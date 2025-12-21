@@ -1,4 +1,4 @@
-require("platform")
+--require("platform")
 require("platform1")
 
 mousepressed = true
@@ -24,10 +24,10 @@ function love.load()
 
   player.ground = player.y
 
-  platform.x
-  platform.h
-  platform.w
-  platform.h
+  platform.x = 400
+  platform.h = 200
+  platform.w = love.graphics.getWidth()/2
+  platform.h = 40
 
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) 
 then
@@ -118,7 +118,7 @@ end
 
 function love.draw()
 
-  platform:draw()
+  --platform:draw()
   platform1:draw()
   
   
@@ -134,6 +134,8 @@ function love.draw()
   love.graphics.setColor(0,255,0)
   love.graphics.print("Left",50,love.graphics.getHeight()-70)
          love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
+
+love.graphics.rectangle("fil",platform.x,platform.y,platform.w,platform.h)
 
 love.graphics.setColor(0,255,0)
 love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
