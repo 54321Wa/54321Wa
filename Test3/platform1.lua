@@ -6,8 +6,8 @@ local dir = 1
 function platform1:load()
    platform1.x = platform1.x
    platform1.y = 600
-   platform.w  = 240
-   platform.h  =  50
+   platform1.w  = 240
+   platform1.h  =  50
   
 end
 
