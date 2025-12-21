@@ -26,8 +26,8 @@ function love.load()
 
   platform = {}
   platform.x = 400
-  platform.h = 200
-  platform.w =  400--love.graphics.getWidth()/2
+  platform.y = love.graphics.getHeight()-200
+  platform.w = 400
   platform.h = 40
 
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) 
@@ -136,8 +136,7 @@ function love.draw()
   love.graphics.print("Left",50,love.graphics.getHeight()-70)
          love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
 
---love.graphics.rectangle("fill", platform.x, platform.y,
---platform.w, platform.h)
+love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 
 love.graphics.setColor(0,255,0)
 love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
