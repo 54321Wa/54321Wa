@@ -3,7 +3,7 @@ function love.load()
 love.graphics.setBackgroundColor(255,0,100)
 
     
-player = {x=100,y=100,w=50,h=50,speed=20}
+player = {x=100,y=love.graphics.getHeight(),w=50,h=50,speed=20}
 platform = {x=300,y=100,w=100,h=100}
 player.ground = player.y
 
@@ -23,11 +23,6 @@ button = {
  freq = 60
 
 end
-
-
-    
-  
- 
 
 
 function love.draw()
@@ -97,7 +92,7 @@ function love.update(dt)
     	player.y = player.ground
   
   elseif player.y > love.graphics.getHeight() -200 then
-  player.y = love.graphics.getHeight() - player.height
+  player.y = love.graphics.getHeight() - player.h
 
 end
  
