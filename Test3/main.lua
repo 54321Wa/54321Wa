@@ -26,9 +26,9 @@ function love.load()
 
   platform = {}
   platform.x = 400
-  platform.y = love.graphics.getHeight()-200
-  platform.w = 400
-  platform.h = 40
+  platform.y = love.graphics.getHeight()-500
+  platform.w = 200
+  platform.h = 80
 
   gameFont = love.graphics.newFont(40)
   
