@@ -3,7 +3,7 @@ function love.load()
 love.graphics.setBackgroundColor(255,0,100)
 
     
-player = {x=100,y=100,w=50,h=50,speed=2}
+player = {x=100,y=100,w=50,h=50,speed=20}
 platform = {x=300,y=100,w=100,h=100}
 player.ground = player.y
 
@@ -33,6 +33,10 @@ end
 function love.draw()
 love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
+if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+love.graphics.setColor(1,0,0)
+end
+
 
 love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
