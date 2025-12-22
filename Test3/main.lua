@@ -1,8 +1,6 @@
 
 require("platform1")
 
-mousepressed = true
-
 function love.load()
 
        love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
@@ -12,8 +10,7 @@ function love.load()
 
 
 
-  --platform:load()
-  platform1:load()
+ 
    
   player = {}
   player.x =   0 --  love.graphics.getWidth()/2
@@ -32,11 +29,11 @@ function love.load()
 
   gameFont = love.graphics.newFont(40)
   
-  button = {
-    l = {0,love.graphics.getHeight()-100,200,100,0},
-    r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
-    j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
-  }
+ button = {
+   l = {0,love.graphics.getHeight()-100,200,100,0},
+   r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
+   j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
+ }
 
   dx = 0
   dy = 0
