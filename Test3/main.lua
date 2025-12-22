@@ -4,10 +4,13 @@ love.graphics.setBackgroundColor(255,0,100)
 
     
 player = {x=100,y=100,w=50,h=50,speed=2}
+if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+
+end
 platform = {x=300,y=100,w=100,h=100}
 player.ground = player.y
 
-gameFont = love.graphics.newFont(40)
+
 
 -----
 button = {
