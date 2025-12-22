@@ -2,33 +2,23 @@
 require("platform1")
 
 function love.load()
-
-       love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
-  love.graphics.setBackgroundColor(255,0,100)
+  love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
+love.graphics.setBackgroundColor(255,0,100)
 
     
-
-
-
- 
-   
-player = {x=100,y=100,w=50,h=50,speed=2}
+player = {x=100,y=100,w=50,h=50,speed=2
 platform{x=300,y=100,w=100,h=100}
-  player.ground = player.y
+player.ground = player.y
 
-  platform = {}
-  platform.x = 400
-  platform.y = love.graphics.getHeight()-500
-  platform.w = 200
-  platform.h = 80
+gameFont = love.graphics.newFont(40)
 
-  gameFont = love.graphics.newFont(40)
-  
- button = {
+-----
+button = {
    l = {0,love.graphics.getHeight()-100,200,100,0},
    r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
    j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
- }
+}
+-----
 
   dx = 0
   dy = 0
@@ -44,18 +34,15 @@ end
 
 
 function love.draw()
+  love.graphics.setColor(0,0,0)
 
-  --platform:draw()
-  platform1:draw()
-  
-  
-  for i,v in pairs(button) do
+
+----
+for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)
-  love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
-  end
-
-  love.graphics.setFont(gameFont)
-  -- love.graphics.print("Movement Example", love.graphics.getWidth()/2  ,40)
+    love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
+end
+  
 
   -- Text
   love.graphics.setColor(0,255,0)
