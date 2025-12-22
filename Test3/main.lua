@@ -12,13 +12,8 @@ function love.load()
 
  
    
-  player = {}
-  player.x =   0 --  love.graphics.getWidth()/2
-  player.y = love.graphics.getHeight()-200
-  player.w = 100
-  player.h = 100
-  player.speed = 20
-
+player = {x=100,y=100,w=50,h=50,speed=2}
+platform{x=300,y=100,w=100,h=100}
   player.ground = player.y
 
   platform = {}
