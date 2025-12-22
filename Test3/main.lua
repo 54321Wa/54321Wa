@@ -34,31 +34,29 @@ end
 
 
 function love.draw()
-  love.graphics.setColor(0,0,0)
+love.graphics.setColor(0,0.5,0)
+love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
+
+love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
+end
+
+love.graphics.setColor(0,255,0)
+love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
 
 
-----
+---- Button
 for i,v in pairs(button) do
   love.graphics.setColor(255,255,255)
     love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
 end
   
 
-  -- Text
+  -- Text Button
   love.graphics.setColor(0,255,0)
   love.graphics.print("Left",50,love.graphics.getHeight()-70)
          love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
 
------
-if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-   love.graphics.setColor(255,255,255)
-else
-   love.graphics.setColor(0,0,255)
-love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
-end
 
-love.graphics.setColor(0,255,0)
-love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
  
 
  
