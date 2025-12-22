@@ -44,8 +44,8 @@ for i,v in pairs(button) do
 end
   
   -- Text Button
-  love.graphics.setColor(0,255,0)
-  love.graphics.print("Left",50,love.graphics.getHeight()-70)
+love.graphics.setColor(0,255,0)
+love.graphics.print("Left",50,love.graphics.getHeight()-70)
          love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
 
 end
