@@ -1,13 +1,10 @@
-
-require("platform1")
-
 function love.load()
   love.window.setMode(love.graphics.getWidth(),love.graphics.getHeight())
 love.graphics.setBackgroundColor(255,0,100)
 
     
-player = {x=100,y=100,w=50,h=50,speed=2
-platform{x=300,y=100,w=100,h=100}
+player = {x=100,y=100,w=50,h=50,speed=2}
+platform = {x=300,y=100,w=100,h=100}
 player.ground = player.y
 
 gameFont = love.graphics.newFont(40)
@@ -36,12 +33,8 @@ end
 function love.draw()
 love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
-
+love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
-end
-
-love.graphics.setColor(0,255,0)
-love.graphics.rectangle("fill",player.x, player.y,player.w,player.h)
 
 
 ---- Button
@@ -50,22 +43,15 @@ for i,v in pairs(button) do
     love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
 end
   
-
   -- Text Button
   love.graphics.setColor(0,255,0)
   love.graphics.print("Left",50,love.graphics.getHeight()-70)
          love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
 
-
- 
-
- 
 end
 
 function love.update(dt)
 
-  --platform:update(dt)
-  platform1:update(dt)
   
   for i,v in pairs(button) do
     if v[5] > 0 then
