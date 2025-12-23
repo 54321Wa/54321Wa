@@ -4,7 +4,7 @@ love.graphics.setBackgroundColor(0,0,0)
 
     
 player = {x=350,y=love.graphics.getHeight()-250,w=50,h=50,speed=20}
-platform = {x=300,y=400,w=100,h=100}
+platform = {x=300,y=500,w=100,h=100}
 
 end
 
@@ -37,9 +37,9 @@ elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
 
-function CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-  love.graphics.set.backgroundColor(255,0,0)
-
+if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+  love.graphics.setBackgroundColor(255,0,0)
+end
 
 end
 
