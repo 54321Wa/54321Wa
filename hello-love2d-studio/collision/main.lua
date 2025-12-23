@@ -14,6 +14,12 @@ button = {
    r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
    j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
 }
+-----
+
+  dx = 0
+  dy = 0
+ 
+ freq = 60
 
 end
 
