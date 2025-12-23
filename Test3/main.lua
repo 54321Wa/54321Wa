@@ -6,16 +6,8 @@ love.graphics.setBackgroundColor(255,0,100)
 player = {x=100,y=love.graphics.getHeight()-250,w=50,h=50,speed=20}
 platform = {x=300,y=400,w=100,h=100}
 
-player.ground = player.y
 
------
-button = {
-   l = {0,love.graphics.getHeight()-100,200,100,0},
-   r = {love.graphics.getWidth()-200,love.graphics.getHeight()-100,200,100,0},
-   j = {love.graphics.getWidth() /2,love.graphics.getHeight()-100,100,100,0},
-}
 
-end
 
 
 function love.draw()
@@ -30,18 +22,7 @@ love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 
 
----- Button
-for i,v in pairs(button) do
-  love.graphics.setColor(255,255,255)
-    love.graphics.rectangle("fill",v[1],v[2],v[3],v[4])
-end
-  
-  -- Text Button
-love.graphics.setColor(0,255,0)
-love.graphics.print("Left",50,love.graphics.getHeight()-70)
-         love.graphics.print("Right",love.graphics.getWidth()-150,love.graphics. getHeight()-70)
 
-end
 
 function love.update(dt)
 
@@ -55,10 +36,10 @@ function love.update(dt)
     
   end
 
-  player.x = player.x + dx * player.speed * dt
+  player.x = player.x + player.speed * dt
   
    
-  player.y = player.y + dy * player.speed * dt
+  player.y = player.y  + player.speed * dt
 
   if player.x < 0 then
   player.x = 0
@@ -102,19 +83,19 @@ function love.mousepressed(mx,my)
         button[i][5] = freq
         if i == "l" then
         
-        dx = - 20
+        --dx = - 20
 
         
 
         elseif i == "r" then
 
-        dx = 20
+        --dx = 20
 
         elseif i == "j" then
 
       
         
-        dy = -40
+        --dy = -40
         
         end
       end  
