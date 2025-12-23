@@ -5,9 +5,8 @@ love.graphics.setBackgroundColor(255,0,100)
     
 player = {x=100,y=love.graphics.getHeight()-250,w=50,h=50,speed=20}
 platform = {x=300,y=400,w=100,h=100}
+
 player.ground = player.y
-
-
 
 -----
 button = {
@@ -77,10 +76,8 @@ function love.update(dt)
 --- collision
   if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
 
-   print("Collision")
    dx = 0
    dy = 0
-
  end
 
 --- edge of screen
@@ -96,11 +93,6 @@ function love.update(dt)
 
 end
  
-
-
-  
-
-
  
 end
 
