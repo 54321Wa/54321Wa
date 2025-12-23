@@ -26,6 +26,15 @@ end
 
 function love.update(dt)
 
+if love.keyboard.isDown("right") then
+  player.x = player.x + player.speed
+
+elseif love.keyboard.isDown(("left")then
+  player.x = player.x - player.speed
+
+end
+
+
 
 end
 
