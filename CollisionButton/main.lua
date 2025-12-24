@@ -60,7 +60,10 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
-          gv = -100
+          if gc then
+             gv = -50
+             gc = false
+           end
      end
   end
 end
