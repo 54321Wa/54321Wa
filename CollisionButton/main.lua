@@ -24,7 +24,7 @@ love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 ------ Button
 love.graphics.rectangle("line",20,20,50,50,10)
-love.graphics.rectangle("fill",20,120,50,50,10)
+love.graphics.rectangle("line",20,120,50,50,10)
 love.graphics.rectangle("fill",20,220,50,50,10)
 
 ----
