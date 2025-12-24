@@ -6,10 +6,10 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
-
 speed_no_dt = 20
 ga = 9.81
 gv = 0
+gc = false
 
 end
 
@@ -60,7 +60,7 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
-       ---player.x = player.x - player.speed
+          gv = -100
      end
   end
 end
