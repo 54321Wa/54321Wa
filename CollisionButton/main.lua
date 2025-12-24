@@ -22,6 +22,12 @@ end
 
 love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
+------
+touches = love.touch.getTouches()
+
+
+
+
 
 end
 
@@ -39,7 +45,11 @@ elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
 -----
-touches = lov
+
+
+
+
+-----
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
   
   --player.x = 0
