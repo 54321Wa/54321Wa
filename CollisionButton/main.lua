@@ -44,9 +44,9 @@ for id = 1, #t do
      end
   end
   --leftButton
-  elseif tx > 20 and tx < 70 then
-     if ty > 20 and ty < 120 then
-       love.graphics.rectangle("fill",20,20,50,50,10)
+  if tx > 20 and tx < 70 then
+     if ty > 120 and ty < 170 then
+       love.graphics.rectangle("fill",20,120,50,50,10)
        player.x = player.x - player.speed
      end
   end
