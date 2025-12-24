@@ -60,7 +60,9 @@ elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
 -----
-
+if rightButton == true then
+   player.x = player.x + player.speed
+end 
 
 
 
