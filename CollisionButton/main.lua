@@ -6,7 +6,9 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=love.graphics.getHeight()-250,w=50,h=50,speed=20}
 platform = {x=300,y=500,w=100,h=100}
 
-
+speed_no_dt = 100
+ga = 9.81
+gv = 0
 
 end
 
@@ -33,8 +35,7 @@ t = love.touch.getTouches()
 leftButton = false
 rightButton = false
 
-ga = 9.81
-gv = 0
+
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
@@ -78,12 +79,13 @@ end
   player.x = love.graphics.getWidth() - player.w
   end
 ------ Gravity
+  speed = speed_no_dt * dt
   player.y = player.y + gv
   gv = gv + ga * dt
 
 
   if player.y > love.graphics.getHeight() then
-  player.y = love.graphics.getHeight() - player.height
+  player.y = love.graphics.getHeight() - player.h
   gv = 0
   end
 
