@@ -39,6 +39,7 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 20 and ty < 70 then
        love.graphics.rectangle("fill",20,20,50,50,10)
+       player.x = player.x + player.speed
      end
   end
 
