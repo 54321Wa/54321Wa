@@ -32,6 +32,9 @@ t = love.touch.getTouches()
 
 leftButton = false
 rightButton = false
+
+gravity = 9.81
+gv = 0
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
@@ -74,12 +77,12 @@ end
   elseif player.x + player.w > love.graphics.getWidth() then
   player.x = love.graphics.getWidth() - player.w
   end
+------ Gravity
+  
 
-  if player.y < 0 then
-    player.y = 0
-
-  elseif player.y > love.graphics.getHeight() then
+  if player.y > love.graphics.getHeight() then
   player.y = love.graphics.getHeight() - player.height
+  gv = 0
   end
 
 -----
