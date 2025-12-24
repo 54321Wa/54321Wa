@@ -56,7 +56,13 @@ for id = 1, #t do
        player.x = player.x - player.speed
      end
   end
-  
+  --jumpButton
+  if tx > 20 and tx < 70 then
+     if ty > 220 and ty < 270 then
+       love.graphics.rectangle("fill",20,220,50,50,10)
+       ---player.x = player.x - player.speed
+     end
+  end
 end
 
 end
