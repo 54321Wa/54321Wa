@@ -60,9 +60,7 @@ elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
 -----
-if rightButton == true then
-   player.x = player.x + player.speed
-end 
+
 
 
 
@@ -76,14 +74,7 @@ end
 
 end
 
-function love.mousepressed(mx,my)
-  
-end
 
-function love.mousereleased()
-  
-    
-end
 
 function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
   return x1 < x2+w2 and
