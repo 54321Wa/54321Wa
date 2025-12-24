@@ -3,7 +3,7 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=love.graphics.getHeight()-250,w=50,h=50,speed =20}
+player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
 
@@ -85,7 +85,7 @@ end
   gv = gv + ga * dt
 
 
-  if player.y > love.graphics.getHeight() then
+  if player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.h
   gv = 0
   end
