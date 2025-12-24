@@ -36,13 +36,20 @@ rightButton = false
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
   love.graphics.print(id, tx, ty)
+  --rightButton
   if tx > 20 and tx < 70 then
      if ty > 20 and ty < 70 then
        love.graphics.rectangle("fill",20,20,50,50,10)
        player.x = player.x + player.speed
      end
   end
-
+  --leftButton
+  elseif tx > 20 and tx < 70 then
+     if ty > 20 and ty < 120 then
+       love.graphics.rectangle("fill",20,20,50,50,10)
+       player.x = player.x - player.speed
+     end
+  end
 end
 
 end
