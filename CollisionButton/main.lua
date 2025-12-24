@@ -6,7 +6,7 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
-speed_no_dt = 20
+
 gravity = 9.81
 ground_Vel = 0
 ground = false
