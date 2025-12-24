@@ -29,6 +29,9 @@ love.graphics.rectangle("fill",20,220,50,50,10)
 
 ----
 t = love.touch.getTouches()
+
+leftButton = false
+rightButton = false
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
