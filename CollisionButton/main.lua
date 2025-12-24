@@ -23,7 +23,7 @@ end
 love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 ------ Button
-love.graphics.rectangle("fill",20,20,50,50,10)
+love.graphics.rectangle("line",20,20,50,50,10)
 love.graphics.rectangle("fill",20,120,50,50,10)
 love.graphics.rectangle("fill",20,220,50,50,10)
 
@@ -32,10 +32,10 @@ t = love.touch.getTouches()
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
-  love.graphics.print("Test", tx, ty)
+  love.graphics.print(id, tx, ty)
   if tx > 20 and tx < 70 then
      if ty > 20 and ty < 70 then
-       love.graphics.rectangle("line",20,20,50,50,10)
+       love.graphics.rectangle("fill",20,20,50,50,10)
      end
   end
 
