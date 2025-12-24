@@ -8,8 +8,7 @@ platform = {x=300,y=500,w=100,h=100}
 
 
 gravity = 9.81
-ground_Vel = 0
-ground = false
+
 
 end
 
@@ -60,10 +59,7 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
-          if ground then
-             ground_Vel = -50
-             ground = true
-           end
+          player.y = player.y + gravity
      end
   end
 end
@@ -91,9 +87,7 @@ end
   player.x = love.graphics.getWidth() - player.w
   end
 ------ Gravity
-  speed = speed_no_dt * dt
-  player.y = player.y + ground_Vel
-  ground_Vel = ground_Vel + gravity * dt
+  player.y  = gravity
 
 
   if player.y > love.graphics.getHeight() -200 then
