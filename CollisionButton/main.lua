@@ -27,7 +27,7 @@ end
 
 
 function love.update(dt)
-
+----
 if love.keyboard.isDown("right") then
   player.x = player.x + player.speed
 
@@ -38,7 +38,8 @@ elseif love.keyboard.isDown("up") then
 elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
-
+-----
+touches = lov
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
   
   --player.x = 0
