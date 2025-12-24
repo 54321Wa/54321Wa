@@ -3,10 +3,11 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=love.graphics.getHeight()-250,w=50,h=50,speed=20}
+player = {x=150,y=love.graphics.getHeight()-250,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
-speed_no_dt = 100
+
+speed_no_dt = 20
 ga = 9.81
 gv = 0
 
@@ -92,8 +93,7 @@ end
 -----
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
   
-  --player.x = 0
-  
+ 
   
 end
 
