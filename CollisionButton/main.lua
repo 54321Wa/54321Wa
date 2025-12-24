@@ -61,7 +61,13 @@ elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
 -----
+  if player.x < 0 then
+  player.x = 0
 
+  elseif player.x + player.w > love.graphics.getWidth() then
+  player.x = love.graphics.getWidth() - player.w
+  
+  end
 
 
 
