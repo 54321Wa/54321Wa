@@ -67,16 +67,20 @@ elseif love.keyboard.isDown("up") then
 elseif love.keyboard.isDown("down") then
   player.y = player.y - player.speed
 end
------
+----- Edge of Screen
   if player.x < 0 then
   player.x = 0
 
   elseif player.x + player.w > love.graphics.getWidth() then
   player.x = love.graphics.getWidth() - player.w
-  
   end
 
+  if player.y < 0 then
+    player.y = 0
 
+  elseif player.y > love.graphics.getHeight() then
+  player.y = love.graphics.getHeight() - player.height
+  end
 
 -----
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
