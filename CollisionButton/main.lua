@@ -24,9 +24,10 @@ love.graphics.setColor(1,0,0)
 love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 ------
 touches = love.touch.getTouches()
+   
 
-for id in ipair(t) do
-
+for id = 1, #t do
+  local tx, ty = love.touch.getPosition(t[id])
 
 end
 
