@@ -33,6 +33,11 @@ t = love.touch.getTouches()
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
   love.graphics.print("Test", tx, ty)
+  if tx > 20 and tx < 70 then
+     if ty > 20 and ty < 70 then
+       love.graphics.rectangle("line",20,20,50,50,10)
+     end
+  end
 
 end
 
