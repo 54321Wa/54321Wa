@@ -61,7 +61,7 @@ for id = 1, #t do
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
           if ground == true then
-   
+              player.y = - 300 * dt
           end
 
      end
