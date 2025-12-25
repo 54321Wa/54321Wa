@@ -79,8 +79,8 @@ function love.update(dt)
 speed = speed_no_delta * dt
 py = py + gv
 gv = gv + ga * dt
-if py + ph > love.graphics.getHeight() then
-   love.graphics.getHeight() - player.h
+if py + player.h > love.graphics.getHeight() then
+   py = py - player.h
    gv = 0
    gc = true
 
@@ -105,7 +105,7 @@ end
   player.x = love.graphics.getWidth() - player.w
   end
 ------ Gravity
-  player.y  = player.y + gravity
+  
 
 
   if player.y > love.graphics.getHeight() -200 then
