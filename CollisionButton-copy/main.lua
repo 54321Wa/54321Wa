@@ -7,14 +7,9 @@ player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
 player.jump = 5
-player
+gravity_Vel = 9.81
 
-py = love.graphics.getHeight()
-speed_no_delta = 100
-speed = 0
-ga = 9.81
-gv = 0
-gc = false
+
 
 end
 
@@ -76,15 +71,9 @@ end
 
 function love.update(dt)
 
-speed = speed_no_delta * dt
-py = py + gv
-gv = gv + ga * dt
-if py + player.h > love.graphics.getHeight() then
-   py = py - player.h
-   gv = 0
-   gc = true
 
-end
+
+
 
 ----
 if love.keyboard.isDown("right") then
