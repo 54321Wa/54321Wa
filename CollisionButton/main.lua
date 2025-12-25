@@ -79,7 +79,12 @@ function love.update(dt)
 speed = speed_no_delta * dt
 py = py + gv
 gv = gv + ga * dt
+if py + ph > love.graphics.getHeight() then
+   love.graphics.getHeight() - player.h
+   gv = 0
+   gc = true
 
+end
 
 ----
 if love.keyboard.isDown("right") then
