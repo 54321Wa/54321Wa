@@ -6,6 +6,8 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
+player.jump = 5
+player
 
 py = love.graphics.getHeight()
 speed_no_delta = 100
@@ -63,11 +65,8 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
-          if gc then
-              gv = -5
-              gc = false
-          end
-
+          
+       player.y = player.y - player.jump
      end
   end
 end
