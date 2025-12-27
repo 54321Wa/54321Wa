@@ -6,8 +6,7 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
-player.jump = 5
-gravity_Vel = 9.81
+
 
 
 
@@ -71,7 +70,7 @@ end
 
 function love.update(dt)
 
-
+gravity_Vel = gravity_Vel * dt
 
 
 
