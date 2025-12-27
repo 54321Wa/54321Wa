@@ -60,9 +60,9 @@ for id = 1, #t do
        love.graphics.rectangle("fill",20,220,50,50,10)
           
        player.y = player.y - player.speed
-     elseif
-       player.y = player.y + 9.81
+     
      end
+     
   end
 end
 
@@ -95,11 +95,11 @@ end
   end
 ------ Gravity
   
-
+  player.y = player.y + 9.81
 
   if player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.h
-  gravity_Vel = 0
+  
   end
 
 -----
