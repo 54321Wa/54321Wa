@@ -58,7 +58,7 @@ for id = 1, #t do
   end
   --jumpButton
   if tx > 20 and tx < 70 then
-     if ty > 220 and ty < 270 then
+     if ty > 220 and ty < 270 and playerCanJump then
        love.graphics.rectangle("fill",20,220,50,50,10)
           
        -- Jump
