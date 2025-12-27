@@ -33,8 +33,7 @@ love.graphics.rectangle("line",20,220,50,50,10)
 ----
 t = love.touch.getTouches()
 
---leftButton = false
---rightButton = false
+
 
 
    
@@ -60,7 +59,9 @@ for id = 1, #t do
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
           
-       player.y = player.y - player.jump
+       player.y = player.y - player.speed
+     elseif
+       player.y = player.y + 9.81
      end
   end
 end
@@ -70,7 +71,7 @@ end
 
 function love.update(dt)
 
-gravity_Vel = gravity_Vel * dt
+
 
 
 
