@@ -31,6 +31,8 @@ love.graphics.setColor(0,0,1)
 love.graphics.rectangle("line",20,220,50,50,10)
 
 ----
+
+
 t = love.touch.getTouches()
 
 
@@ -59,6 +61,7 @@ for id = 1, #t do
      if ty > 220 and ty < 270 then
        love.graphics.rectangle("fill",20,220,50,50,10)
           
+       -- Jump
        player.y = player.y - player.speed
      
      end
@@ -95,7 +98,7 @@ end
   end
 ------ Gravity
   
-  player.y = player.y + 9.81
+  --player.y = player.y + 9.81
 
   if player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.h
