@@ -3,12 +3,12 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=200,w=50,h=50,xVel =20,yVel=30}
+player = {x=150,y=200,w=50,h=50,xVel =20,yVel=30,gravity = 9.8}
 platform = {x=300,y=500,w=100,h=100}
 
 --speed = 0
 --speed_no_dt = 100
-gravity = 9.81
+--gravity = 9.81
 --groundVel = 0
 groundCollision = false
 end
@@ -66,7 +66,7 @@ end
 
 function love.update(dt)
 --speed = speed_no_dt* dt
-player.y = player.y + gravity
+player.y = player.y + player.gravity
 --groundVel = groundVel + gravity * dt
 if player.y + player.h > love.graphics.getHeight() then
    player.y = love.graphics.getHeight() - player.h
