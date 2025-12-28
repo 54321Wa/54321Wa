@@ -25,7 +25,7 @@ love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 ------ Button
 love.graphics.rectangle("line",20,20,50,50,10)
 love.graphics.rectangle("line",20,120,50,50,10)
-love.graphics.setColor(0,0,1)
+--love.graphics.setColor(0,0,1)
 love.graphics.rectangle("line",20,220,50,50,10)
 
 ----
@@ -57,6 +57,7 @@ for id = 1, #t do
   --jumpButton
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 and playerCanJump then
+       love.graphics.setColor(1,0,0)
        love.graphics.rectangle("fill",20,220,50,50,10)
           
        -- Jump
