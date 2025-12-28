@@ -3,14 +3,11 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=200,w=50,h=50,xVel =20,dy=0,can = 9.8}
+player = {x=150,y=200,w=50,h=50,xVel =20,dy=0,canJump = true}
 platform = {x=300,y=500,w=100,h=100}
 
---speed = 0
---speed_no_dt = 100
---gravity = 9.81
---groundVel = 0
-groundCollision = false
+gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
+jumpForce = -400 -- pixels/second (negative for upward)
 end
 
 
@@ -51,7 +48,7 @@ for id = 1, #t do
   end
   --jumpButton
   if tx > 20 and tx < 70 then
-     if ty > 220 and ty < 270  then
+     if ty > 220 and ty < 270  and player.canJump then
        
          if groundCollision then
                player.y = player.y + player.yVel
@@ -65,14 +62,16 @@ end
 end
 
 function love.update(dt)
---speed = speed_no_dt* dt
-player.y = player.y + player.gravity
---groundVel = groundVel + gravity * dt
-if player.y + player.h > love.graphics.getHeight() then
-   player.y = love.graphics.getHeight() - player.h
-   groundVel = 0
-   groundCollision = true
-end
+-- Apply gravity
+    player.dy = player.dy + gravity * dt
+    player.y = player.y + player.dy * dt
+
+    -- Check for ground collision (simple example)
+    if player.y > 300 then -- Assuming ground is at y=300
+        player.y = 300
+        player.dy = 0
+        player.canJump = true
+    end
 
 
 ----
