@@ -7,6 +7,7 @@ player = {x=150,y=200,w=50,h=50,xVel =20,yVel=10}
 platform = {x=300,y=500,w=100,h=100}
 
 gravity = 9.81
+groundVel = 0
 
 end
 
@@ -59,6 +60,10 @@ end
 function love.update(dt)
 
 player.y = player.y + gravity
+groundVel = groundVel + gravity * dt
+if player.y + player.h > love.graphics.getHeight() then
+
+
 
 ----
 if love.keyboard.isDown("right") then
