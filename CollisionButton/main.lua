@@ -3,13 +3,13 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=200,w=50,h=50,xVel =20}
+player = {x=150,y=200,w=50,h=50,xVel =20,yVel=30}
 platform = {x=300,y=500,w=100,h=100}
 
-speed = 0
-speed_no_dt = 100
+--speed = 0
+--speed_no_dt = 100
 gravity = 9.81
-groundVel = 0
+--groundVel = 0
 groundCollision = false
 end
 
@@ -54,10 +54,10 @@ for id = 1, #t do
      if ty > 220 and ty < 270  then
        
          if groundCollision then
-               groundVel = - 50
+               player.y = player.y + player.yVel
                groundCollision = false
           end
-               love.graphics.rectangle("fill",20,220,50,50,10)
+          love.graphics.rectangle("fill",20,220,50,50,10)
           
      end
    end
@@ -65,9 +65,9 @@ end
 end
 
 function love.update(dt)
-speed = speed_no_dt* dt
+--speed = speed_no_dt* dt
 player.y = player.y + gravity
-groundVel = groundVel + gravity * dt
+--groundVel = groundVel + gravity * dt
 if player.y + player.h > love.graphics.getHeight() then
    player.y = love.graphics.getHeight() - player.h
    groundVel = 0
