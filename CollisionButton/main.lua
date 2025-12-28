@@ -3,10 +3,10 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=love.graphics.getH,w=50,h=50,xVel =20,yVel=10}
+player = {x=150,y=200,w=50,h=50,xVel =20,yVel=10}
 platform = {x=300,y=500,w=100,h=100}
 
-
+gravity = 9.81
 
 end
 
@@ -57,6 +57,8 @@ end
 end
 
 function love.update(dt)
+
+player.y = player.y + gravity
 
 ----
 if love.keyboard.isDown("right") then
