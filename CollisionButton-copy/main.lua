@@ -3,7 +3,7 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=150,w=50,h=50,speed =20}
+player = {x=150,y=150,w=50,h=50,xVel =20,yVel=100}
 platform = {x=300,y=500,w=100,h=100}
 
 player.yvel = 0
@@ -47,14 +47,14 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 20 and ty < 70 then
        love.graphics.rectangle("fill",20,20,50,50,10)
-       player.x = player.x + player.speed
+       player.x = player.x + player.xVel
      end
   end
   --leftButton
   if tx > 20 and tx < 70 then
      if ty > 120 and ty < 170 then
        love.graphics.rectangle("fill",20,120,50,50,10)
-       player.x = player.x - player.speed
+       player.x = player.x - player.xVel
      end
   end
   --jumpButton
