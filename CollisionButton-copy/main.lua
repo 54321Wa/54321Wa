@@ -6,8 +6,9 @@ love.graphics.setBackgroundColor(0,0,0)
 player = {x=150,y=150,w=50,h=50,speed =20}
 platform = {x=300,y=500,w=100,h=100}
 
-
-
+player.yvel = 0
+player.jumpVel = 100
+playerCanJump = false
 
 
 end
@@ -62,8 +63,8 @@ for id = 1, #t do
        love.graphics.rectangle("fill",20,220,50,50,10)
           
        -- Jump
-       player.y = player.y - player.speed
-     
+       player.yvel = player.jumpVel
+       playerCanJump = false
      end
      
   end
