@@ -50,10 +50,9 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270  and player.canJump then
        
-         if groundCollision then
-               player.y = player.y + player.yVel
-               groundCollision = false
-          end
+        player.dy = jumpForce -- Give initial upward velocity
+        player.canJump = false -- Prevent double jumps
+        -- love.audio.play(jumpsound) -- Play sound if you have one [9]
           love.graphics.rectangle("fill",20,220,50,50,10)
           
      end
@@ -67,9 +66,9 @@ function love.update(dt)
     player.y = player.y + player.dy * dt
 
     -- Check for ground collision (simple example)
-    if player.y > 300 then -- Assuming ground is at y=300
-        player.y = 300
-        player.dy = 0
+    if player.y > 600 then 
+        -- Assuming ground is at y=300
+        player.y = 600
         player.canJump = true
     end
 
