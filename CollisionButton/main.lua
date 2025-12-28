@@ -53,7 +53,9 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270  then
        love.graphics.rectangle("fill",20,220,50,50,10)
-       player.y = player.y - player.yVel
+         if groundCollision then
+            groundVel = - 5
+            groundCollision = false
      end
    end
 end
