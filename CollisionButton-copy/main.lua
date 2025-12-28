@@ -27,12 +27,7 @@ love.graphics.rectangle("line",20,220,50,50,10)
 
 ----
 
-
 t = love.touch.getTouches()
-
-
-
-
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
@@ -54,18 +49,14 @@ for id = 1, #t do
   --jumpButton
   if tx > 20 and tx < 70 then
      if ty > 220 and ty < 270 and playerCanJump then
-       love.graphics.setColor(1,0,0)
+       ---love.graphics.setColor(1,0,0)
        love.graphics.rectangle("fill",20,220,50,50,10)
      end
    end
 end
-
+end
 
 function love.update(dt)
-
-
-
-
 
 ----
 if love.keyboard.isDown("right") then
@@ -101,7 +92,7 @@ if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,plat
   
 end
 
-end
+
 end
 
 
