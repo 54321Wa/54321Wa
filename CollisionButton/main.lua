@@ -3,16 +3,10 @@ function love.load()
 love.graphics.setBackgroundColor(0,0,0)
 
     
-player = {x=150,y=150,w=50,h=50,speed =20}
+player = {x=150,y=150,w=50,h=50,xVel =20,yVel=10}
 platform = {x=300,y=500,w=100,h=100}
 
 
-py = love.graphics.getHeight()
-speed_no_delta = 100
-speed = 0
-ga = 9.81
-gv = 0
-gc = false
 
 end
 
@@ -21,9 +15,7 @@ end
 function love.draw()
 love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
-if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-love.graphics.setColor(1,0,0)
-end
+
 
 
 love.graphics.setColor(1,0,0)
@@ -31,16 +23,11 @@ love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
 ------ Button
 love.graphics.rectangle("line",20,20,50,50,10)
 love.graphics.rectangle("line",20,120,50,50,10)
-love.graphics.setColor(0,0,1)
 love.graphics.rectangle("line",20,220,50,50,10)
 
 ----
+
 t = love.touch.getTouches()
-
-leftButton = false
-rightButton = false
-
-
    
 for id = 1, #t do
   local tx, ty = love.touch.getPosition(t[id])
@@ -49,43 +36,27 @@ for id = 1, #t do
   if tx > 20 and tx < 70 then
      if ty > 20 and ty < 70 then
        love.graphics.rectangle("fill",20,20,50,50,10)
-       player.x = player.x + player.speed
+       player.x = player.x + player.xVel
      end
   end
   --leftButton
   if tx > 20 and tx < 70 then
      if ty > 120 and ty < 170 then
        love.graphics.rectangle("fill",20,120,50,50,10)
-       player.x = player.x - player.speed
+       player.x = player.x - player.xVel
      end
   end
   --jumpButton
   if tx > 20 and tx < 70 then
-     if ty > 220 and ty < 270 then
+     if ty > 220 and ty < 270  then
        love.graphics.rectangle("fill",20,220,50,50,10)
-          if gc then
-              gv = -5
-              gc = false
-          end
-
+       player.y = player.y - player.yVel
      end
-  end
+   end
 end
-
 end
-
 
 function love.update(dt)
-
-speed = speed_no_delta * dt
-py = py + gv
-gv = gv + ga * dt
-if py + player.h > love.graphics.getHeight() then
-   py = py - player.h
-   gv = 0
-   gc = true
-
-end
 
 ----
 if love.keyboard.isDown("right") then
@@ -107,22 +78,22 @@ end
   end
 ------ Gravity
   
-
+  --player.y = player.y + 9.81
 
   if player.y > love.graphics.getHeight() -200 then
   player.y = love.graphics.getHeight() - player.h
-  gravity_Vel = 0
+  
   end
 
 -----
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
   
- 
+ print("ccc")
   
 end
 
-end
 
+end
 
 
 function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
