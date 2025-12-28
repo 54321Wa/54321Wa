@@ -54,10 +54,11 @@ for id = 1, #t do
      if ty > 220 and ty < 270  then
        
          if groundCollision then
-            groundVel = - 5
-            groundCollision = false
-            love.graphics.rectangle("fill",20,220,50,50,10)
+               groundVel = - 50
+               groundCollision = false
           end
+               love.graphics.rectangle("fill",20,220,50,50,10)
+          
      end
    end
 end
