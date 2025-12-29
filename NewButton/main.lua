@@ -1,0 +1,40 @@
+function love.load()
+
+buttons = {}
+
+function newButton(x, y, w, h, text, callback)
+    local btn = {
+        x = x, y = y, w = w, h = h,
+        text = text,
+        callback = callback
+    }
+    table.insert(buttons, btn) -- Add the new button to the table [1, 4]
+end
+
+newButton(100, 50, 150, 40, "Start Game", function() print("Game Started!") end)
+newButton(100, 100, 150, 40, "Settings", function() print("Opening Settings...") end)
+
+end
+
+-- In love.draw()
+function love.draw()
+    for i, btn in ipairs(buttons) do
+        love.graphics.rectangle("fill", btn.x, btn.y, btn.w, btn.h)
+        love.graphics.print(btn.text, btn.x + 10, btn.y + 10)
+    end
+end
+
+-- In love.mousepressed(x, y, button)
+function love.mousepressed(x, y, button)
+    if button == 1 then -- Left mouse button
+        for i, btn in ipairs(buttons) do
+            if x > btn.x and x < btn.x + btn.w and
+               y > btn.y and y < btn.y + btn.h then
+                btn.callback() -- Execute the button's function
+                break -- Stop checking once a button is clicked
+            end
+        end
+    end
+end
+
+
