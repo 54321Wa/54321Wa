@@ -19,7 +19,7 @@ end
 -- In love.draw()
 function love.draw()
     for i, btn in ipairs(buttons) do
-        love.graphics.rectangle("fill", btn.x, btn.y, btn.w, btn.h)
+        love.graphics.rectangle("line", btn.x, btn.y, btn.w, btn.h)
         love.graphics.print(btn.text, btn.x + 10, btn.y + 10)
     end
 end
