@@ -11,9 +11,9 @@ function newButton(x, y, w, h, text, callback)
     table.insert(buttons, btn) -- Add the new button to the table [1, 4]
 end
 
-newButton(100, 50, 150, 40, "Start Game", function() print("Game Started!") end)
-newButton(100, 100, 150, 40, "Settings", function() print("Opening Settings...") end)
-newButton(100, 150, 150, 40, "Jump", function() print("Jump ...") end)
+newButton(100, 50, 150, 40, "Game Start!", function() print("Game Start!") end)
+newButton(100, 100, 150, 40, "Game Play!", function() print("Game Play!") end)
+newButton(100, 150, 150, 40, "Game Quit!", function() print("Game Quit!") end)
 end
 
 -- In love.draw()
