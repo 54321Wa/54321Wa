@@ -3,14 +3,14 @@ anyDown = true
 
 function love.load()
 --anyDown = love.mouse.isDown( button1, button2, button3)
-buttons = {1,2,3,x,y,w,h}
+buttons = {text,x,y,w,h}
 
 end
 
 
 function love.draw()
 
-table.insert(buttons,1,"Left")
+table.insert(buttons,"Left",50,50,100,100)
 table.insert(buttons,2,"Right")
 table.insert(buttons,3,"Jump")
 
