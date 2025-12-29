@@ -31,6 +31,7 @@ function love.mousepressed(x, y, button)
             if x > btn.x and x < btn.x + btn.w and
                y > btn.y and y < btn.y + btn.h then
                 btn.callback() -- Execute the button's function
+                love.graphics.setBackgroundColor(255,0,100)
                 break -- Stop checking once a button is clicked
             end
         end
@@ -40,6 +41,7 @@ function love.mousepressed(x, y, button)
             if x > btn.x and x < btn.x + btn.w and
                y > btn.y and y < btn.y + btn.h then
                 btn.callback() -- Execute the button's function
+                love.graphics.setBackgroundColor(0,0,255)
                 break -- Stop checking once a button is clicked
             end
         end
