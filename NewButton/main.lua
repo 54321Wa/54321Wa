@@ -13,7 +13,7 @@ end
 
 newButton(100, 50, 150, 40, "Start Game", function() print("Game Started!") end)
 newButton(100, 100, 150, 40, "Settings", function() print("Opening Settings...") end)
-
+newButton(100, 150, 150, 40, "Jump", function() print("Jump") end)
 end
 
 -- In love.draw()
@@ -27,6 +27,24 @@ end
 -- In love.mousepressed(x, y, button)
 function love.mousepressed(x, y, button)
     if button == 1 then -- Left mouse button
+        for i, btn in ipairs(buttons) do
+            if x > btn.x and x < btn.x + btn.w and
+               y > btn.y and y < btn.y + btn.h then
+                btn.callback() -- Execute the button's function
+                break -- Stop checking once a button is clicked
+            end
+        end
+    end
+    if button == 2 then -- Right mouse button
+        for i, btn in ipairs(buttons) do
+            if x > btn.x and x < btn.x + btn.w and
+               y > btn.y and y < btn.y + btn.h then
+                btn.callback() -- Execute the button's function
+                break -- Stop checking once a button is clicked
+            end
+        end
+    end
+    if button == 3 then -- Left mouse button
         for i, btn in ipairs(buttons) do
             if x > btn.x and x < btn.x + btn.w and
                y > btn.y and y < btn.y + btn.h then
