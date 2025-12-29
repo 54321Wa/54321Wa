@@ -7,7 +7,9 @@ player = {x=150,y=200,w=50,h=50,xVel =20,dy=0,canJump = true}
 platform = {x=300,y=500,w=100,h=100}
 
 gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
-jumpForce = -400 -- pixels/second (negative for upward)
+jumpForce = -800 -- pixels/second (negative for upward)
+
+ground = love.graphics.getHeight() - player.h
 end
 
 
@@ -66,9 +68,9 @@ function love.update(dt)
     player.y = player.y + player.dy * dt
 
     -- Check for ground collision (simple example)
-    if player.y > 600 then 
+    if player.y > ground then 
         -- Assuming ground is at y=300
-        player.y = 600
+        player.y = ground
         player.canJump = true
     end
 
