@@ -13,7 +13,7 @@ end
 
 newButton(100, 50, 150, 40, "Start Game", function() print("Game Started!") end)
 newButton(100, 100, 150, 40, "Settings", function() print("Opening Settings...") end)
-newButton(100, 150, 150, 40, "Jump", function() print("Jump") end)
+newButton(100, 150, 150, 40, "Jump", function() print("Jump ...") end)
 end
 
 -- In love.draw()
