@@ -16,13 +16,15 @@ x,y = love.touch.getPosition(id)
 if pressure > 0 then
    if 0+devicex <x and x<60 + devicex and 0+ devicey <y and y <60+devicey then
          spry = spry + 1
-   if 0+devicex <x and x<60 + devicex and 0+ devicey <y and y <60+devicey then
-         spry = spry + 1
-   elseipif 0+devicex <x and x<60 + devicex and 0+ devicey <y and y <60+devicey then
-         spry = spry + 1
-
-    if 0+devicex <x and x<60 + devicex and 0+ devicey <y and y <60+devicey then
-         spry = spry + 1
+----
+   elseif 0+devicex <x and x<60 + devicex and 130+ devicey <y and y <190+devicey then
+         spry = spry - 1
+----
+   elseif 0+devicex <x and x<60 + devicex and 130+ devicey <y and y <190+devicey then
+         sprx = sprx + 1
+----
+    elseif 0+devicex <x and x<60 + devicex and 195+ devicey <y and y <255+devicey then
+         sprx = sprx - 1
 
 
 end
