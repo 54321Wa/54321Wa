@@ -11,7 +11,13 @@ end
 function love.update(dt)
 touches = love.touch.getTouches()
 for i,id in pairs(touches) do
-pressure = love
+pressure = love.touch.getPressure(id)
+x,y = love.touch.getPosition(id)
+if pressure > 0 then
+   if 
+
+end
+
 
 end
 
