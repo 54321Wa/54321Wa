@@ -1,3 +1,4 @@
+
 function love.load()
    printx = 0
    printy = 0
