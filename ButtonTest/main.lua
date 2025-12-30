@@ -37,7 +37,7 @@ end
 
 function love.draw()
 love.graphics.setBackgroundColor(1,1,1)
-love.graphics.setColor(0,0,0,1)
+love.graphics.setColor(255,0,0,1)
 love.graphics.circle("fill",sprx + devicex, spry + devicey,40)
 
 love.graphics.setColor(0,0,0,0.5)
