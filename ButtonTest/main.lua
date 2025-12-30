@@ -38,6 +38,10 @@ end
 function love.draw()
 love.graphics.setBackgroundColor(1,1,1)
 love.graphics.setColor(0,0,0,1)
-lovw.graphics.circle("fill",sprx + devicex, spry )
+love.graphics.circle("fill",sprx + devicex, spry + devicey)
+
+love.graphics.setColor(0,0,0,0.5)
+love.graphics.draw(KeyImg, 0+devicex,0+devicey,0,0.75)
+
 
 end
