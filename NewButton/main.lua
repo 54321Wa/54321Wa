@@ -25,7 +25,7 @@ function love.draw()
 end
 
 -- In love.mousepressed(x, y, button)
-function love.mousepressed(x, y, button)
+function love.mousepressed(x, y, button,istouch)
     if button == 1 then -- Left mouse button
         for i, btn in ipairs(buttons) do
             if x > btn.x and x < btn.x + btn.w and
@@ -36,25 +36,7 @@ function love.mousepressed(x, y, button)
             end
         end
     end
-    if button == 2 then -- Right mouse button
-        for i, btn in ipairs(buttons) do
-            if x > btn.x and x < btn.x + btn.w and
-               y > btn.y and y < btn.y + btn.h then
-                btn.callback() -- Execute the button's function
-                love.graphics.setBackgroundColor(0,0,255)
-                break -- Stop checking once a button is clicked
-            end
-        end
-    end
-    if button == 3 then -- Left mouse button
-        for i, btn in ipairs(buttons) do
-            if x > btn.x and x < btn.x + btn.w and
-               y > btn.y and y < btn.y + btn.h then
-                btn.callback() -- Execute the button's function
-                break -- Stop checking once a button is clicked
-            end
-        end
-    end
+    
 end
 
 
