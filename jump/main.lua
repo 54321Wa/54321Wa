@@ -1,7 +1,8 @@
--- In love.load()
+function love.load()
 player = {x=100, y=300, dy=0, canJump=true}
 gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
 jumpForce = -400 -- pixels/second (negative for upward)
+end
 
 -- In love.update(dt)
 function love.update(dt)
