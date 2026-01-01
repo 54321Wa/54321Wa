@@ -14,11 +14,11 @@ for i,id in pairs(touches) do
 pressure = love.touch.getPressure(id)
 x,y = love.touch.getPosition(id)
 
-if pressure >  then
+if pressure > 0 then
    if 0+devicex <x and x<60 + devicex and 0+ devicey <y and y <60+devicey then
          spry = spry - 10
 ----
-   elseif 0+devicex <x and x<60 + devicex and 130+ devicey <y and y <190+devicey then
+   elseif 0+devicex <x and x<60 + devicex and 65+ devicey <y and y <125+devicey then
          spry = spry + 10
 ----
    elseif 0+devicex <x and x<60 + devicex and 130+ devicey <y and y <190+devicey then
