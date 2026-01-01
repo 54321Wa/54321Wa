@@ -1,5 +1,7 @@
 function love.load()
-
+devicex = 800
+devicey = 800
+character = love.graphics.newImage("arrow.png")
 sprx = 100
 spry = 100
 touches = {}
@@ -30,9 +32,9 @@ if pressure > 0 then
   end
 
 
-end
+
 
 function love.draw()
-love.graphics.draw(character,)
+love.graphics.draw(character,sprx,spry)
 
 end
