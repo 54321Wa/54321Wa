@@ -1,4 +1,4 @@
-function love.load()
+function love.load( ... )
 devicex = 5
 devicey = 25
 KeyImg = love.graphics.newImage("arrow.png")
