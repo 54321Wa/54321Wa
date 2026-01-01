@@ -1,6 +1,6 @@
 function love.load()
-devicex = 800
-devicey = 800
+devicex = 5
+devicey = 25
 character = love.graphics.newImage("arrow.png")
 sprx = 100
 spry = 100
