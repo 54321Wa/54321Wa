@@ -38,7 +38,7 @@ function love.draw()
 end
 
 function love.mousepressed(x,y) 
-   if gamestat = "menu" then
+   if gamestat == "menu" then
       button_click(x,y)
 
    end 
