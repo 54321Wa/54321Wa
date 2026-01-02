@@ -8,12 +8,21 @@ player.damage = 2
 player.pic = love.graphics.newImage("red.png")
 
 function player_draw()
-  love.graphics.set.color(255,255,255)
+  --love.graphics.set.color(255,255,255)
+  
   love.graphics.draw(player.pic, player.x,player.y)
 
 end
 
 function player_move()
-
+  if love.keyboard.isDown("up") then
+     player.y = player.y - player.speed
+  end
+  if love.keyboard.isDown("down") then
+     player.y = player.y + player.speed
+  end
+  if love.keyboard.isDown("left") then
+     player.y = player.y - player.speed
+  end
 
 end

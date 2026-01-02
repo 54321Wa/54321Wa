@@ -6,7 +6,7 @@ function love.load()
 medium = love.graphics.newFont(45)
 
 gamestat = "menu"
-gamestat = "pl"
+gamestat = "playing"
 
 love.graphics.setBackgroundColor(255,255,255)
 
@@ -20,7 +20,7 @@ end
 function love.update(dt)
   if gamestat == "playing" then
      player_move(dt)
-     map_collide()
+     --map_collide()
   end
 
 end
