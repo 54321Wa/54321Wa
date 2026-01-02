@@ -6,6 +6,7 @@ function love.load()
 medium = love.graphics.newFont(45)
 
 gamestat = "menu"
+gamestat = "pl"
 
 love.graphics.setBackgroundColor(255,255,255)
 
