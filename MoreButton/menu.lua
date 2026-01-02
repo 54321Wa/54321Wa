@@ -17,6 +17,10 @@ end
 
 
 function button_click()
+  for i,v in ipairs(button) do
+    if x = > v.
+  
+  end
 
 
 
