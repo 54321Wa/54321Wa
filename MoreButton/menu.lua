@@ -1,7 +1,7 @@
 button = {}
 
-function button_spawn(x,y,text)
-  table.insert(button, {x = x, y = y, text = text})
+function button_spawn(x,y,text,id)
+  table.insert(button, {x = x, y = y, text = text, id = id})
 end
 
 
@@ -16,12 +16,16 @@ end
 
 
 
-function button_click()
+function button_click(x,y)
   for i,v in ipairs(button) do
     if x > v.x and
-    if x < v.x + v.text:getWidth() and
-    if y > v.y and
-    if y < v.y + v.text:getHeight()
+    x < v.x + v.text:getWidth() and
+    y > v.y and
+    y < v.y + v.text:getHeight() then
+
+     
+
+    end
   
   end
 

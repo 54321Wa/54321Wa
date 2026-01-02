@@ -12,8 +12,8 @@ love.graphics.setBackgroundColor(255,255,255)
 
 --Buttons
 
-button_spawn(5,200,"Start")
-button_spawn(5,400, "Quit")
+button_spawn(5,200,"Start", "start")
+button_spawn(5,400, "Quit", "quit ")
 
 end
 
@@ -37,4 +37,7 @@ function love.draw()
 
 end
 
-function love.mousepressed(x,y,)
+function love.mousepressed(x,y) 
+
+
+end
