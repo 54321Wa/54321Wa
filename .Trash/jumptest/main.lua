@@ -1,4 +1,4 @@
-function love.load() 
+ function love.load() 
 player ={} 
 player.y = 470 
 player.x = 0 
