@@ -22,7 +22,9 @@ function player_move()
      player.y = player.y + player.speed
   end
   if love.keyboard.isDown("left") then
-     player.y = player.y - player.speed
+     player.x = player.x - player.speed
   end
-
+  if love.keyboard.isDown("right") then
+     player.x = player.x + player.speed
+  end
 end
