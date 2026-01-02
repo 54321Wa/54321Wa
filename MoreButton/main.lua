@@ -1,18 +1,19 @@
-require "player"
-require "menu"
 
+require "menu"
+require "player"
 
 function love.load()
 medium = love.graphics.newFont(45)
 
 gamestat = "menu"
-gamestat = "playing"
+--gamestat = "playing"
 
 love.graphics.setBackgroundColor(255,255,255)
 
 --Buttons
 
 button_spawn(5,200,"Start")
+button_spawn(5,400, "Quit")
 
 end
 
