@@ -1,3 +1,4 @@
+require "player"
 require "menu"
 
 
@@ -16,12 +17,18 @@ end
 
 
 function love.update(dt)
+  if gamestat == "playing" then
+     player_move(dt)
+     map_collide()
+  end
 
 end
 
 
 function love.draw()
-  if gamestat == 
+  if gamestat == "playing"then
+     player_draw()
+  end
   if gamestat == "menu" then
      button_draw()
   end
