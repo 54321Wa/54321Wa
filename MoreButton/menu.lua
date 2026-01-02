@@ -19,9 +19,9 @@ end
 function button_click(x,y)
   for i,v in ipairs(button) do
     if x > v.x and
-    x < v.x + v.text:getWidth() and
+    x < v.x + medium:getWidth(v.text) and
     y > v.y and
-    y < v.y + v.text:getHeight() then
+    y < v.y + medium:getHeight(v.text) then
 
       if id == "quit" then
         love.event.push("quit")
