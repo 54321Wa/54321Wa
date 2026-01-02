@@ -18,7 +18,10 @@ end
 
 function button_click()
   for i,v in ipairs(button) do
-    if x = > v.
+    if x > v.x and
+    if x < v.x + v.text:getWidth() and
+    if y > v.y and
+    if y < v.y + v.text:getHeight()
   
   end
 
