@@ -23,7 +23,9 @@ function button_click(x,y)
     y > v.y and
     y < v.y + v.text:getHeight() then
 
-     
+      if id == "quit" then
+        love.event.push("quit")
+      end
 
     end
   
