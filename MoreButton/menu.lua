@@ -27,14 +27,15 @@ function button_click(x,y)
     if x > v.x and
     x < v.x + medium:getWidth(v.text) and
     y > v.y and
-    y < v.y + medium:getHeight(v.text) then
+    y < v.y + medium:getHeight() then
 
-    --if id == "quit" then
-        --love.event.push("quit")
-      --end
-    if id == "start" then
-        gamestate = "playing"
-     end
+       if id == "quit" then
+          love.event.push("quit")
+       end
+
+       if id == "start" then
+          gamestate = "playing"
+       end
 
     end
   
