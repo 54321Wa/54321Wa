@@ -33,7 +33,7 @@ function button_click(x,y)
         love.event.push("quit")
       end
       if id == "start" then
-        gamestat = "playing"
+        gamestate = "playing"
      end
 
     end

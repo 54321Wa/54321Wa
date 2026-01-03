@@ -7,7 +7,7 @@ require "menu"
 function love.load()
 medium = love.graphics.newFont(45)
 
-gamestate = "playing"
+gamestate = "menu"
 
 love.graphics.setBackgroundColor(255,255,255)
 
