@@ -1,12 +1,13 @@
-
+require "player"
+require "map"
 require "menu"
 
-require "player"
+
 
 function love.load()
 medium = love.graphics.newFont(45)
 
-gamestate = "menu"
+gamestate = "playing"
 
 love.graphics.setBackgroundColor(255,255,255)
 
@@ -23,7 +24,7 @@ function love.update(dt)
   mousey = love.mouse.getY()
   if gamestate == "playing" then
      player_move(dt)
-     map_collide()
+     --map_collide()
   end
 
   if gamestate == "menu" then
