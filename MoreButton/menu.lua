@@ -47,6 +47,8 @@ function button_check()
     mousey > v.y and
     mousey < v.y + medium:getHeight(v.text) then
     v.mouseover = true
+else 
+    v.mouseover = false
 end
 
   end

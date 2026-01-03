@@ -25,8 +25,9 @@ function love.update(dt)
      player_move(dt)
      --map_collide()
   end
-
-
+  if gamestat == "menu" then
+     button_check()
+  end
 end
 
 
