@@ -8,7 +8,12 @@ end
 
 function button_draw()
   for i,v in ipairs(button) do
-      love.graphics.setColor(0,0,0)
+      if v.mouseover == false then
+         love.graphics.setColor(0,0,0)
+      end
+      if v.mouseover == true then
+         love.graphics.setColor(0,255,255)
+      end
       love.graphics.setFont(medium)
       love.graphics.print(v.text,v.x,v.y)
 
