@@ -19,6 +19,8 @@ end
 
 
 function love.update(dt)
+  mousex = love.mouse.getX()
+  mousey = love.mouse.getY()
   if gamestat == "playing" then
      player_move(dt)
      --map_collide()
