@@ -1,11 +1,12 @@
 
 require "menu"
---require "player"
+
+require "player"
 
 function love.load()
 medium = love.graphics.newFont(45)
 
-gamestat = "menu"
+gamestate = "menu"
 --gamestat = "playing"
 
 love.graphics.setBackgroundColor(255,255,255)
@@ -33,7 +34,7 @@ end
 
 
 function love.draw()
-  if gamestate == "playing"then
+  if gamestate == "playing" then
      player_draw()
   end
   if gamestate == "menu" then
@@ -43,7 +44,7 @@ function love.draw()
 end
 
 function love.mousepressed(x,y) 
-   if gamestat == "menu" then
+   if gamestate == "menu" then
       button_click(x,y)
 
    end 
