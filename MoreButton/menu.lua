@@ -1,7 +1,8 @@
 button = {}
 
+
 function button_spawn(x,y,text,id)
-  table.insert(button, {x = x, y = y, text = text, id = id})
+  table.insert(button, {x = x, y = y, text = text, id = id, mouseover = false})
 end
 
 
@@ -38,7 +39,11 @@ function button_check()
   for i,v in ipairs(button) do
     if x > v.x and
     mousex < v.x + medium:getWidth(v.text) and
-    mousey > v.y 
+    mousey > v.y and
+    mousey < v.y + medium:getHeight(v.text) then
+    v.mouseover = true
+end
+
   end
 end
 
