@@ -30,7 +30,7 @@ function button_click(x,y)
     y < v.y + medium:getHeight() then
 
        if id == "quit" then
-          love.event.push("quit")
+          love.event.push("quit",exitstatus)
        end
 
        if id == "start" then
