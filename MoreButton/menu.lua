@@ -33,7 +33,7 @@ function button_click(x,y)
           love.event.push("quit",exitstatus)
        end
 
-       if id == "1" then
+       if id == "start" then
           gamestate = "playing"
        end
 
