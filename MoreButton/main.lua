@@ -1,6 +1,6 @@
 
 require "menu"
-require "player"
+--require "player"
 
 function love.load()
 medium = love.graphics.newFont(45)
@@ -21,21 +21,22 @@ end
 function love.update(dt)
   mousex = love.mouse.getX()
   mousey = love.mouse.getY()
-  if gamestat == "playing" then
+  if gamestate == "playing" then
      player_move(dt)
      --map_collide()
   end
-  if gamestat == "menu" then
+
+  if gamestate == "menu" then
      button_check()
   end
 end
 
 
 function love.draw()
-  if gamestat == "playing"then
+  if gamestate == "playing"then
      player_draw()
   end
-  if gamestat == "menu" then
+  if gamestate == "menu" then
      button_draw()
   end
 
