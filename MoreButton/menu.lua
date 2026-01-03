@@ -34,6 +34,14 @@ function button_click(x,y)
   
   end
 
+function button_check()
+  for i,v in ipairs(button) do
+    if x > v.x and
+    mousex < v.x + medium:getWidth(v.text) and
+    mousey > v.y 
+  end
+end
+
 
 
 end
