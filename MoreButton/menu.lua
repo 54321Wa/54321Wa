@@ -34,7 +34,8 @@ function button_click(x,y)
       end
       -- Error
       --if v.id == "quit" then
-          --gamestate = "menu"
+          
+         --love.event.quit()
       --end
    end
   end
