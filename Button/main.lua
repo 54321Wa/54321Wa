@@ -23,9 +23,12 @@ function love.mousepressed(x, y, button_id)
                 if id == "startButton" then
                     print("Start button pressed!")
                     -- Add game logic here
+                    love.graphics.setBackgroundColor
                 elseif id == "optionsButton" then
                     print("Options button pressed!")
+
                     -- Add game logic here
+                    love.graphics.setBackgroundColor(3,50,80)
                 end
             end
         end
