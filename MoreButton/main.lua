@@ -35,6 +35,8 @@ function love.update(dt)
      button_check()
   end
 
+  if gamestate == "quit" then
+
  
 end
 
