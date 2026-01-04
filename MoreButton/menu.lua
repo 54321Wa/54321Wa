@@ -33,9 +33,9 @@ function button_click(x,y)
           gamestate = "playing"
       end
       
-      if v.id == "quit" then
-          love.event.push("quit")
-      end
+      --if v.id == "quit" then
+          --love.event.push("quit")
+      --end
        
       
 
@@ -53,8 +53,7 @@ function button_check()
 else 
     v.mouseover = false
 end
-
-  end
+end
 end
 
 
