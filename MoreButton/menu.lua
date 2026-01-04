@@ -32,7 +32,7 @@ function button_click(x,y)
       if v.id == "start" then
           gamestate = "playing"
       end
-
+      -- Error
       --if v.id == "quit" then
           --gamestate = "menu"
       --end
