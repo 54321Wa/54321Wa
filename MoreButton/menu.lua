@@ -32,15 +32,12 @@ function button_click(x,y)
       if v.id == "start" then
           gamestate = "playing"
       end
-      
-      --if v.id == "quit" then
-          --love.event.push("quit")
-      --end
-       
-      
 
-    end
-  
+      if v.id == "quit" then
+          love.graphics.setBackgroundColor(30,30,50)
+          love.graphics.
+      end
+   end
   end
 end
 function button_check()
