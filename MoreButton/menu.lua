@@ -33,10 +33,9 @@ function button_click(x,y)
           gamestate = "playing"
       end
 
-      if v.id == "quit" then
-          love.graphics.setBackgroundColor(30,30,50)
-          love.graphics.
-      end
+      --if v.id == "quit" then
+          --gamestate = "menu"
+      --end
    end
   end
 end
