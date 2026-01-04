@@ -29,15 +29,9 @@ function button_click(x,y)
     x < v.x + medium:getWidth(v.text) and
     y > v.y and
     y < v.y + medium:getHeight() then
-
-    if id == "quit" then
-          r = love.quit()
-          --love.event.quit(exitstatus)
-    end
-
-    if id == "1" then
+      if v.id == "start" then
           gamestate = "playing"
-     end
+      end
 
     end
   
