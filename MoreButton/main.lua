@@ -52,6 +52,10 @@ function love.mousepressed(x,y)
       button_click(x,y)
 
    end 
+   if gamestate == "playing" then
+      button_click(x,y)
+
+    end
 
 
 end
