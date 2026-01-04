@@ -13,14 +13,7 @@ function button_draw()
       end
       if v.mouseover == true then
          love.graphics.setColor(0,255,255)
-         if id == "quit" then
-          r = love.quit()
-          --love.event.quit(exitstatus)
-       end
-
-       if id == "start" then
-          gamestate = "playing"
-       end
+         
       end
       love.graphics.setFont(medium)
       love.graphics.print(v.text,v.x,v.y)
@@ -37,14 +30,14 @@ function button_click(x,y)
     y > v.y and
     y < v.y + medium:getHeight() then
 
-       if id == "quit" then
+    if id == "quit" then
           r = love.quit()
           --love.event.quit(exitstatus)
-       end
+    end
 
-       if id == "start" then
+    if id == "1" then
           gamestate = "playing"
-       end
+     end
 
     end
   
