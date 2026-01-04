@@ -32,6 +32,12 @@ function button_click(x,y)
       if v.id == "start" then
           gamestate = "playing"
       end
+      
+      if v.id == "quit" then
+          love.event.push("quit")
+      end
+       
+      
 
     end
   
