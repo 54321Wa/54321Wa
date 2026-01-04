@@ -1,5 +1,5 @@
 require "player"
-require "map"
+
 require "menu"
 
 
@@ -23,12 +23,8 @@ function love.update(dt)
   mousex = love.mouse.getX()
   mousey = love.mouse.getY()
   if gamestate == "playing" then
-    
-
-
-
-       player_move(dt)
-     --map_collide()
+    player_move(dt)
+     
   end
 
   if gamestate == "menu" then
