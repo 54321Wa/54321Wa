@@ -49,6 +49,7 @@ function love.draw()
 end
 
 function love.mousepressed(x,y) 
+   
    if gamestate == "menu" then
       button_click(x,y)
 
