@@ -36,6 +36,9 @@ function love.update(dt)
   end
 
   if gamestate == "quit" then
+     button_check()
+     love.event.quit()
+  end
 
  
 end
@@ -57,6 +60,11 @@ function love.mousepressed(x,y)
       button_click(x,y)
 
    end 
+ 
+   if gamestate == "quit" then
+      button_click()
+   end
+   
    
 
 
