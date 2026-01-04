@@ -31,9 +31,9 @@ function love.update(dt)
      button_check()
   end
 
-  if gamestate == "menu" then
-     button_click()
-  end
+  --if gamestate == "menu" then
+     --button_click()
+  --end
 end
 
 
