@@ -33,10 +33,10 @@ function button_click(x,y)
           gamestate = "playing"
       end
       -- Error
-      --if v.id == "quit" then
-          
+      if v.id == "quit" then
+         love.graphics.setBackgroundColor(255,0,0)
          --love.event.quit()
-      --end
+      end
    end
   end
 end
