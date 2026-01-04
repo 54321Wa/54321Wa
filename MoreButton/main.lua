@@ -23,7 +23,8 @@ function love.update(dt)
   mousex = love.mouse.getX()
   mousey = love.mouse.getY()
   if gamestate == "playing" then
-     --player_move(dt)
+    -- button_check()
+       player_move(dt)
      --map_collide()
   end
 
@@ -47,7 +48,7 @@ function love.draw()
 
 end
 
-function love.mousepressed(x,y,button_click,istouch) 
+function love.mousepressed(x,y) 
    if gamestate == "menu" then
       button_click(x,y)
 
