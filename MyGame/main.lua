@@ -10,7 +10,7 @@ medium = love.graphics.newFont(45)
 
 gamestate = "menu"
 
-love.graphics.setBackgroundColor(255,255,255)
+love.graphics.setBackgroundColor(255,0,255)
 
 --Buttons
 
@@ -43,7 +43,7 @@ end
 
 function love.draw()
   if gamestate == "game_playing" then
-     player_draw()
+     game_draw()
   end
   if gamestate == "menu" then
      button_draw()
