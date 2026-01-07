@@ -1,4 +1,5 @@
-require "player"
+
+require "game"
 
 require "menu"
 
