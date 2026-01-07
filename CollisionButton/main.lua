@@ -26,7 +26,9 @@ love.graphics.print("Score  ",300,50)
 
 love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
+if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
 
+end
 
 
 love.graphics.setColor(1,0,0)
@@ -104,9 +106,9 @@ end
   end
 ----- Collision Check
   if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-
+  print("Collision")
   
-  score = score + 1
+  --score = score + 1
   
   end
    
