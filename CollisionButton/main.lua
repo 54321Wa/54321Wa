@@ -4,7 +4,7 @@ love.graphics.setBackgroundColor(0,0,0)
 
     
 player = {x=150,y=200,w=50,h=50,xVel =20,dy=0,canJump = true}
-platform = {x=150,y=800,w=200,h=100}
+box = {x=150,y=800,w=200,h=100}
 
 gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
 jumpForce = -800 -- pixels/second (negative for upward)
@@ -27,7 +27,7 @@ love.graphics.print("Score  ",300,50)
 love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
 
-if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+if        CheckCollision(player.x,player.y,player.w,player.h,box.x,box.y,box.w,box.h) then
   love.graphics.setColor(0,1,0)
 else
   love.graphics.setColor(1,0,0)
@@ -35,7 +35,7 @@ end
 
 
 love.graphics.setColor(1,0,0)
-love.graphics.rectangle("fill", platform.x, platform.y,platform.w, platform.h)
+love.graphics.rectangle("fill", box.x, box.y,box.w, box.h)
 ------ Button
 love.graphics.rectangle("line",20,20,50,50,10)
 love.graphics.rectangle("line",20,120,50,50,10)
@@ -108,7 +108,7 @@ end
   player.x = love.graphics.getWidth() - player.w
   end
 ----- Collision Check
-  if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
+  if        CheckCollision(player.x,player.y,player.w,box.h,box.x,box.y,box.w,box.h) then
   print("Collision")
   
   --score = score + 1
