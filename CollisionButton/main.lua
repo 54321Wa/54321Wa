@@ -98,11 +98,12 @@ end
   end
 ----- Collision Check
   if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) == true then
+
   
-  print("ccc")
   score = score + 1
   
   end
+   
 
 end
 
