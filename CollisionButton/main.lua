@@ -28,8 +28,9 @@ love.graphics.setColor(0,0.5,0)
 love.graphics.rectangle("fill",player.x,player.y,player.w,player.h)
 
 if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-love.graphics.setColor(0.5,0,0.5)
-
+  love.graphics.setColor(0,1,0)
+else
+  love.graphics.setColor(1,0,0)
 end
 
 
