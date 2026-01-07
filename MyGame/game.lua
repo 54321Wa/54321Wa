@@ -1,12 +1,14 @@
-
+require "player"
 
 function game_load()
-love.graphics.setBackgroundColor(0,255,0)
+
 
 end
 
 
-function game_update()
+function game_update(dt)
+--love.graphics.setBackgroundColor(0,255,0)
+player_move(dt)
 
 end
 
