@@ -10,7 +10,7 @@ medium = love.graphics.newFont(45)
 
 gamestate = "menu"
 
-love.graphics.setBackgroundColor(255,0,255)
+love.graphics.setBackgroundColor(0,0,255)
 
 --Buttons
 
@@ -26,8 +26,8 @@ function love.update(dt)
   mousex = love.mouse.getX()
   mousey = love.mouse.getY()
   if gamestate == "game_playing" then
-    --player_move(dt)
-    game_update()
+    game_move(dt)
+    --game_update()
     
      
   end
@@ -65,8 +65,5 @@ function love.mousepressed(x,y)
    if gamestate == "quit" then
       button_click()
    end
-   
-   
-
 
 end
