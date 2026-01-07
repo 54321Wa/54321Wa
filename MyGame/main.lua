@@ -17,6 +17,8 @@ love.graphics.setBackgroundColor(255,0,255)
 button_spawn(5,200,"Start","start")
 button_spawn(5,400,"Quit","quit")
 
+game_load()
+
 end
 
 
@@ -24,7 +26,9 @@ function love.update(dt)
   mousex = love.mouse.getX()
   mousey = love.mouse.getY()
   if gamestate == "game_playing" then
-    player_move(dt)
+    --player_move(dt)
+    game_update()
+    
      
   end
 
