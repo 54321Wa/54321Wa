@@ -10,6 +10,9 @@ gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
 jumpForce = -800 -- pixels/second (negative for upward)
 
 ground = love.graphics.getHeight() - player.h
+
+score = 0
+medium = love.graphics.newFont(45)
 end
 
 
@@ -94,10 +97,10 @@ end
   player.x = love.graphics.getWidth() - player.w
   end
 ----- Collision Check
-  if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
-  love.g
+  if        CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) == true then
+  
   print("ccc")
-
+  score = score + 1
   
   end
 
