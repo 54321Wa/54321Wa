@@ -4,7 +4,7 @@ love.graphics.setBackgroundColor(0,0,0)
 
     
 player = {x=150,y=200,w=50,h=50,xVel =20,dy=0,canJump = true}
-platform = {x=300,y=500,w=100,h=100}
+platform = {x=150,y=00,w=100,h=100}
 
 gravity = 900 -- pixels/second^2 (adjust for desired fall speed)
 jumpForce = -800 -- pixels/second (negative for upward)
@@ -93,25 +93,14 @@ end
   elseif player.x + player.w > love.graphics.getWidth() then
   player.x = love.graphics.getWidth() - player.w
   end
------- Gravity
-  
-  --player.y = player.y + 9.81
-
-  --if player.y > love.graphics.getHeight() -200 then
-  --player.y = love.graphics.getHeight() - player.h
-  
-  --end
-
------
+----- Collision Check
 if CheckCollision(player.x,player.y,player.w,player.h,platform.x,platform.y,platform.w,platform.h) then
   
  print("ccc")
   
 end
 
-
 end
-
 
 function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
   return x1 < x2+w2 and
