@@ -110,9 +110,7 @@ end
 ----- Collision Check
   if        CheckCollision(player.x,player.y,player.w,box.h,box.x,box.y,box.w,box.h) then
   print("Collision")
-  text = "321"
-  love.graphics.draw(text,390,60)
-  --score = score + 1
+  
   
   end
   
@@ -120,7 +118,7 @@ end
 
 end
 
-function CheckCollision(x1,y1,w1,h1, x2,y2,w2,h2)
+function CheckCollision(x1,y1,w1,h1,x2,y2,w2,h2)
   return x1 < x2+w2 and
          x2 < x1+w1 and
          y1 < y2+h2 and
